@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Aguas</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_formulario_reporte">formulario_reporte</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="boton_reportar">Reportar</string>
+    <string name="title_activity_maps_activity2">Map</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_contaminacion_agua">ContaminacionAgua</string>
+    <string name="title_activity_deslaves">deslaves</string>
+    <string name="title_activity_encharcamientos">Encharcamientos</string>
+    <string name="title_activity_falta_agua">FaltaAgua</string>
+    <string name="title_activity_fuga_agua">FugaAgua</string>
+    <string name="title_activity_hundimientos">Hundimientos</string>
+    <string name="title_activity_infraestructura">Infraestructura</string>
+    <string name="title_activity_inundaciones">Inundaciones</string>
+    <string name="title_activity_confirmation">Confirmation</string>
+    <string name="title_activity_splash">splash</string>
+</resources>
