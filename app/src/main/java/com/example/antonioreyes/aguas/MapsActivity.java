@@ -147,8 +147,10 @@ public class MapsActivity extends FragmentActivity implements LocationListener {
         center = mMap.getCameraPosition().target;
        //center = mMap.getCameraPosition().target;
 
+        Globals.latitude = center.latitude;
+        Globals.longitude = center.longitude;
+
        // this.onLocationChanged(mMap.getMyLocation());
-        intent.putExtra(EXTRA_MESSAGE, center+" ");
 
         startActivity(intent);
     }

@@ -20,7 +20,6 @@ public class MainActivity extends Activity {
     public final static String EXTRA_MESSAGE_NEW = "com.example.antonioreyes.aguas.messageNew";
 
     ListView list;
-    String center;
     String[] web = {
             "FALTA DE AGUA",
             "CONTAMINACIÓN DEL AGUA",
@@ -48,7 +47,6 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         Intent intent = getIntent();
-        center = intent.getStringExtra(MapsActivity.EXTRA_MESSAGE);
 
         CustomList adapter = new
                 CustomList(MainActivity.this, web, imageId);
@@ -92,56 +90,48 @@ public class MainActivity extends Activity {
 
     public void faltaAgua(View view){
         Intent intent = new Intent(this, FaltaAgua.class);
-        intent.putExtra(EXTRA_MESSAGE_NEW, center+" ");
         startActivity(intent);
         this.finish();
     }
 
     public void contaminacionAgua(View view){
         Intent intent = new Intent(this, ContaminacionAgua.class);
-        intent.putExtra(EXTRA_MESSAGE_NEW, center+" ");
         startActivity(intent);
         this.finish();
     }
 
     public void inundaciones(View view){
         Intent intent = new Intent(this, Inundaciones.class);
-        intent.putExtra(EXTRA_MESSAGE_NEW, center+" ");
         startActivity(intent);
         this.finish();
     }
 
     public void encharcamientos(View view){
         Intent intent = new Intent(this, Encharcamientos.class);
-        intent.putExtra(EXTRA_MESSAGE_NEW, center+" ");
         startActivity(intent);
         this.finish();
     }
 
     public void fugaAgua(View view){
         Intent intent = new Intent(this, FugaAgua.class);
-        intent.putExtra(EXTRA_MESSAGE_NEW, center+" ");
         startActivity(intent);
         this.finish();
     }
 
     public void deslaves(View view){
         Intent intent = new Intent(this, Deslaves.class);
-        intent.putExtra(EXTRA_MESSAGE_NEW, center+" ");
         startActivity(intent);
         this.finish();
     }
 
     public void hundimientos(View view){
         Intent intent = new Intent(this, Hundimientos.class);
-        intent.putExtra(EXTRA_MESSAGE_NEW, center+" ");
         startActivity(intent);
         this.finish();
     }
 
     public void infraestructura(View view){
         Intent intent = new Intent(this, Infraestructura.class);
-        intent.putExtra(EXTRA_MESSAGE_NEW, center+" ");
         startActivity(intent);
         this.finish();
     }

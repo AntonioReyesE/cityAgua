@@ -2,102 +2,60 @@
 <items version="2" >
 
     <item
-        jar="/Users/antonioreyes/AndroidStudioProjects/Aguas/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/Users/antonioreyes/AndroidStudioProjects/Aguas/app/build/intermediates/pre-dexed/debug/classes-eef2525605550148a27e6ccb047fbaa7234ddd18.jar" />
-    </item>
-    <item
-        jar="/Users/antonioreyes/AndroidStudioProjects/Aguuua/app/libs/ParseCrashReporting-1.8.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="6abf1314a88755b8fa034b2ae99956fc02170ed1">
-        <dex dex="/Users/antonioreyes/AndroidStudioProjects/Aguuua/app/build/intermediates/pre-dexed/debug/ParseCrashReporting-1.8.3-e8636e1ea94fede74c513a6a3fc7f2290fa67a6f.jar" />
-    </item>
-    <item
-        jar="/Users/antonioreyes/AndroidStudioProjects/Aguuua/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/Users/antonioreyes/AndroidStudioProjects/Aguuua/app/build/intermediates/pre-dexed/debug/classes-dc52681ddfaf5bd27c15b302bcce3bbbb1f12b76.jar" />
-    </item>
-    <item
-        jar="/Users/antonioreyes/AndroidStudioProjects/Aguuua/app/libs/Parse-1.8.3.jar"
+        jar="/Users/Antonio/Desktop/Aguuua/app/libs/Parse-1.8.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="56dfc827c23c1f0be64eff2ef556633ea95b16ad">
-        <dex dex="/Users/antonioreyes/AndroidStudioProjects/Aguuua/app/build/intermediates/pre-dexed/debug/Parse-1.8.3-cc533accfe44005d4d2062805698a189e180f571.jar" />
+        <dex dex="/Users/Antonio/Desktop/Aguuua/app/build/intermediates/pre-dexed/debug/Parse-1.8.3-142d04fd854a45e7463740e502431c05c17df639.jar" />
     </item>
     <item
-        jar="/Users/antonioreyes/AndroidStudioProjects/Aguas/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/Users/antonioreyes/AndroidStudioProjects/Aguas/app/build/intermediates/pre-dexed/debug/classes-0e63785da3fef0fb89d0366356a0d8ed10c14a24.jar" />
-    </item>
-    <item
-        jar="/Users/antonioreyes/AndroidStudioProjects/Aguas/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/Users/antonioreyes/AndroidStudioProjects/Aguas/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-c3ed07d4ac092d7cc597ec93e18fee9698444558.jar" />
-    </item>
-    <item
-        jar="/Users/antonioreyes/AndroidStudioProjects/Aguas/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
-        <dex dex="/Users/antonioreyes/AndroidStudioProjects/Aguas/app/build/intermediates/pre-dexed/debug/classes-9c752ddda54c8de1fcc249f5b9b53b5c0b26eb99.jar" />
-    </item>
-    <item
-        jar="/Users/antonioreyes/AndroidStudioProjects/Aguas/app/libs/Parse-1.8.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="56dfc827c23c1f0be64eff2ef556633ea95b16ad">
-        <dex dex="/Users/antonioreyes/AndroidStudioProjects/Aguas/app/build/intermediates/pre-dexed/debug/Parse-1.8.3-5fbf79b19ea86cc2d694b1219e68456632c9a556.jar" />
-    </item>
-    <item
-        jar="/Users/antonioreyes/AndroidStudioProjects/Aguuua/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/Users/antonioreyes/AndroidStudioProjects/Aguuua/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-b74fa5a45478f0eaa94f8ce1db99124a6108a51d.jar" />
-    </item>
-    <item
-        jar="/Users/antonioreyes/AndroidStudioProjects/Aguuua/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
-        <dex dex="/Users/antonioreyes/AndroidStudioProjects/Aguuua/app/build/intermediates/pre-dexed/debug/classes-ebdbeb924fdd7faf3ab8d77c2766f1935c902b40.jar" />
-    </item>
-    <item
-        jar="/Users/antonioreyes/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.0/6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd/bolts-android-1.2.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
-        <dex dex="/Users/antonioreyes/AndroidStudioProjects/Aguuua/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-4a8add89571cdf3ba1e63059cfeee6b3c79af312.jar" />
-    </item>
-    <item
-        jar="/Users/antonioreyes/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.1.4/129874135e6081269ace2312092031558865de12/bolts-android-1.1.4.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="129874135e6081269ace2312092031558865de12">
-        <dex dex="/Users/antonioreyes/AndroidStudioProjects/Aguas/app/build/intermediates/pre-dexed/debug/bolts-android-1.1.4-9c7deef003d65170cfaf6f5392080339a4ed09f0.jar" />
-    </item>
-    <item
-        jar="/Users/antonioreyes/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jar="/Applications/adt-bundle-mac-x86_64-20130522/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/Users/antonioreyes/AndroidStudioProjects/Aguas/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-8f71272805743e583384c74608d19efe62072384.jar" />
+        <dex dex="/Users/Antonio/Desktop/Aguuua/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-eef1a116297be4c5f32c1be50f956ba6afd7551e.jar" />
     </item>
     <item
-        jar="/Users/antonioreyes/AndroidStudioProjects/Aguuua/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jar="/Users/Antonio/Desktop/Aguuua/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="/Users/Antonio/Desktop/Aguuua/app/build/intermediates/pre-dexed/debug/classes-5855d54b6ba5b83d558d087049ac80ae22a03568.jar" />
+    </item>
+    <item
+        jar="/Users/Antonio/Desktop/Aguuua/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/Antonio/Desktop/Aguuua/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-a97a7f1e051f2203ecd3642468dc8e9721e03889.jar" />
+    </item>
+    <item
+        jar="/Users/Antonio/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.0/6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd/bolts-android-1.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="/Users/Antonio/Desktop/Aguuua/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-4bc7b3ba213f43e1d785e0690110e194068b4585.jar" />
+    </item>
+    <item
+        jar="/Users/Antonio/Desktop/Aguuua/app/libs/ParseCrashReporting-1.8.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6abf1314a88755b8fa034b2ae99956fc02170ed1">
+        <dex dex="/Users/Antonio/Desktop/Aguuua/app/build/intermediates/pre-dexed/debug/ParseCrashReporting-1.8.3-3b7746f18f14b9d6a40ef3b284357deaf80db0e4.jar" />
+    </item>
+    <item
+        jar="/Users/Antonio/Desktop/Aguuua/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/Users/antonioreyes/AndroidStudioProjects/Aguuua/app/build/intermediates/pre-dexed/debug/classes-5b1552771513ee2ced313db6e82e6ddc43c9c37e.jar" />
+        <dex dex="/Users/Antonio/Desktop/Aguuua/app/build/intermediates/pre-dexed/debug/classes-c75ec940ee65061ec66a6a77f09d57d8f76ab6cd.jar" />
+    </item>
+    <item
+        jar="/Users/Antonio/Desktop/Aguuua/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/Antonio/Desktop/Aguuua/app/build/intermediates/pre-dexed/debug/classes-48849ba74b85aea692ba6ded23cfed87eb1c09e3.jar" />
     </item>
 
 </items>

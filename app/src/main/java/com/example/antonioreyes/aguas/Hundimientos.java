@@ -35,8 +35,6 @@ public class Hundimientos extends ActionBarActivity {
 
     private ParseObject p;
 
-    private LatLng location;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +48,7 @@ public class Hundimientos extends ActionBarActivity {
         timeTV = (EditText) findViewById(R.id.timeTV);
 
         placeTV = (EditText) findViewById(R.id.placeTV);
-        placeTV.setText(center);
+        placeTV.setText(Globals.latitude + ", " + Globals.longitude);
 
         commentTV = (EditText) findViewById(R.id.commentTV);
 
@@ -67,7 +65,7 @@ public class Hundimientos extends ActionBarActivity {
 
         setTime();
 
-        p = new ParseObject("Hundimiento");
+        p = new ParseObject("Report");
 
     }
 
@@ -146,10 +144,12 @@ public class Hundimientos extends ActionBarActivity {
     }
 
     public void saveReport(View v){
-        p.put("reportDate", dateTV.getText().toString());
-        p.put("reportTime", timeTV.getText().toString());
-        p.put("location", placeTV.getText().toString());
-        p.put("comment", commentTV.getText().toString());
+        p.put("Tipo_Reporte", "Hundimientos");
+        p.put("Fecha", dateTV.getText().toString());
+        p.put("Hora", timeTV.getText().toString());
+        p.put("Latitud", Globals.latitude);
+        p.put("Longitud", Globals.longitude);
+        p.put("Comentario", commentTV.getText().toString());
 
         p.saveInBackground(new SaveCallback() {
             public void done(ParseException e) {
@@ -181,17 +181,13 @@ public class Hundimientos extends ActionBarActivity {
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         if (requestCode == 1 && resultCode == Activity.RESULT_OK){
-            double lat = data.getDoubleExtra("latitude", 1);
-            double lon = data.getDoubleExtra("longitude", 1);
-            this.location = new LatLng(lat, lon);
+            Globals.latitude = data.getDoubleExtra("latitude", 1);
+            Globals.longitude = data.getDoubleExtra("longitude", 1);
             updateLocation();
         }
     }
 
     public void updateLocation(){
-        EditText locationText = (EditText)findViewById(R.id.placeTV);
-        String lon = this.location.longitude+"";
-        String lat = this.location.latitude+"";
-        locationText.setText(lat+","+lon);
+        placeTV.setText(Globals.latitude + ", " + Globals.longitude);
     }
 }
