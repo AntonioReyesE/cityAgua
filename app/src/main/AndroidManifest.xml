@@ -58,7 +58,7 @@
             android:label="@string/title_activity_encharcamientos" >
         </activity>
         <activity
-            android:name=".FaltaAgua"
+            android:name=".ReportActivity"
             android:label="@string/title_activity_falta_agua" >
         </activity>
         <activity
