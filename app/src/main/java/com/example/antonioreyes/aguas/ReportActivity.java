@@ -13,21 +13,18 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.google.android.gms.maps.model.LatLng;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.SaveCallback;
 
 import java.util.Calendar;
 
-public class FaltaAgua extends ActionBarActivity {
+public class ReportActivity extends ActionBarActivity {
 
     private int type;
 
@@ -47,7 +44,7 @@ public class FaltaAgua extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_falta_agua);
+        setContentView(R.layout.activity_report);
 
         Intent intent = getIntent();
         type = intent.getIntExtra("type", -1);

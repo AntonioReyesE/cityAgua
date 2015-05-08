@@ -55,7 +55,7 @@ public class MainActivity extends Activity {
 
                 //Toast.makeText(MainActivity.this, "You Clicked at " +web[+ position], Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(getApplicationContext(), FaltaAgua.class);
+                Intent intent = new Intent(getApplicationContext(), ReportActivity.class);
                 intent.putExtra("type", position);
                 startActivity(intent);
             }
