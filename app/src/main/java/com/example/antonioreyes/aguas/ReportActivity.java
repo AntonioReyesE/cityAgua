@@ -6,7 +6,9 @@ import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
@@ -24,9 +26,11 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.parse.ParseException;
+import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.SaveCallback;
 
+import java.io.ByteArrayOutputStream;
 import java.util.Calendar;
 
 public class ReportActivity extends Activity {
@@ -41,6 +45,8 @@ public class ReportActivity extends Activity {
     private EditText commentTV;
     private Spinner typeSP;
     private TextView typeLB;
+
+    private ImageView imagePreviewIV;
 
 
     private Calendar calendar;
@@ -182,6 +188,7 @@ public class ReportActivity extends Activity {
      */
 
     public void saveReport(View v){
+
         switch (type){
             case 0:
                 p.put("Tipo_Reporte", "Falta de agua");
@@ -210,8 +217,7 @@ public class ReportActivity extends Activity {
             default:
                 p.put("Tipo_Reporte", "Desconocido");
         }
-        
-        p.put( "Tipo_Reporte", "Falta de Agua");
+
         p.put( "Fecha", dateTV.getText().toString() );
         p.put( "Hora", timeTV.getText().toString() );
         p.put( "Latitud", Globals.latitude );
@@ -223,6 +229,22 @@ public class ReportActivity extends Activity {
                 p.put( "Tipo", typeSP.getSelectedItem().toString() );
                 break;
         }
+
+
+        Bitmap bitmap = ((BitmapDrawable) imagePreviewIV.getDrawable()).getBitmap();
+
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        byte[] image = stream.toByteArray();
+
+        ParseFile file = new ParseFile("androidbegin.png", image);
+        file.saveInBackground();
+
+        p.put("ImageFile", file);
+
+        // Show a simple toast message
+        Toast.makeText(this, "Image Uploaded",
+                Toast.LENGTH_SHORT).show();
 
         p.saveInBackground(new SaveCallback() {
             public void done(ParseException e) {
@@ -273,8 +295,8 @@ public class ReportActivity extends Activity {
             Toast.makeText(this, picturePath, Toast.LENGTH_LONG);
             cursor.close();
 
-            ImageView imageView = (ImageView) findViewById(R.id.imagePreview);
-            imageView.setImageBitmap( BitmapFactory.decodeFile(picturePath) );
+            imagePreviewIV = (ImageView) findViewById(R.id.imagePreview);
+            imagePreviewIV.setImageBitmap( BitmapFactory.decodeFile(picturePath) );
         }else{
             Toast.makeText(this, "Error", Toast.LENGTH_LONG);
         }
