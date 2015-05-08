@@ -96,11 +96,8 @@ public class ContaminacionAgua extends ActionBarActivity implements AdapterView.
                 second);
 
         s.setAdapter(a);
-
         //s.setOnItemClickListener(this);
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
