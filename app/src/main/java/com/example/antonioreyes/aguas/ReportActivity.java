@@ -262,8 +262,8 @@ public class ReportActivity extends Activity {
     }
 
     public void regresaReportes3(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        //Intent intent = new Intent(this, MainActivity.class);
+        //startActivity(intent);
         this.finish();
     }
 
