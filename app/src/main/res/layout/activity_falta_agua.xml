@@ -13,6 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/fondo_reportes"
+            android:scaleType="fitXY"
             android:layout_alignParentBottom="true"/>
 
         <ImageView
@@ -167,9 +168,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Tipo"
+            android:id="@+id/typeLB"
+            android:layout_below="@+id/changeLocationBtn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/typeSP"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/typeLB"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Comentario"
             android:id="@+id/textView5"
-            android:layout_below="@+id/changeLocationBtn"
+            android:layout_below="@+id/typeSP"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginLeft="10dp"/>
@@ -218,6 +240,8 @@
             android:layout_alignLeft="@+id/addPhotoBtn"
             android:layout_toLeftOf="@+id/changeLocationBtn"
             android:layout_toStartOf="@+id/changeLocationBtn" />
+
+
 
     </RelativeLayout>
 
