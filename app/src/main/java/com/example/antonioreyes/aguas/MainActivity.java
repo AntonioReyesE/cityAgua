@@ -31,14 +31,14 @@ public class MainActivity extends Activity {
             "INFRAESTRUCTURA EN RIESGO"
     } ;
     Integer[] imageId = {
-            R.drawable.fa,
-            R.drawable.ac,
-            R.drawable.in,
-            R.drawable.en,
-            R.drawable.fu,
-            R.drawable.de,
-            R.drawable.so,
-            R.drawable.ir
+            R.drawable.boton_reportar_on_03,
+            R.drawable.boton_reportar_on_02,
+            R.drawable.boton_reportar_on_01,
+            R.drawable.boton_reportar_on_04,
+            R.drawable.boton_reportar_on_05,
+            R.drawable.boton_reportar_on_06,
+            R.drawable.boton_reportar_on_07,
+            R.drawable.boton_reportar_on_08
     };
 
     @Override

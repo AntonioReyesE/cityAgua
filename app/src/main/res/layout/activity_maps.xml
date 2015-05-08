@@ -1,9 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent"
     tools:context="com.example.antonioreyes.aguas.formulario_reporte">
 
 
@@ -13,19 +10,42 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/imageView2"
+        />
 
-    <Button
+    <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/boton_reportar"
+        android:scaleType="fitXY"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/boton_reportar"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/boton_reportar_letra"
+        android:layout_marginBottom="5dp"
+        android:adjustViewBounds="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_height="50dp"
         android:id="@+id/changeLocationBtn"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:onClick="make_report"/>
+        android:onClick="make_report"
+        android:src="@drawable/boton_reportar_over"
+        android:adjustViewBounds="true"/>
 
     <ImageView
         android:layout_width="40dp"
@@ -34,6 +54,47 @@
         android:src="@drawable/target"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:id="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/menup_barra"
+        android:layout_alignParentTop="true"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:src="@drawable/menup_aguas_tipo"
+        android:id="@+id/aguas_tipo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/menup_boton1"
+        android:id="@+id/emergencia"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/menup_boton3"
+        android:id="@+id/glosario"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
 
 
 </RelativeLayout>

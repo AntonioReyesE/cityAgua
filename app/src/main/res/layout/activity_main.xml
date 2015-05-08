@@ -5,22 +5,54 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.example.antonioreyes.aguas.MainActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo_reportes"
+        android:scaleType="fitXY"
+        />
+
     <ListView
         android:id="@+id/list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageButton3">
+        android:layout_below="@+id/imageView2">
     </ListView>
 
-    <ImageButton
-        android:layout_width="50dp"
+
+    <ImageView
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/imageButton3"
-        android:src="@drawable/atras"
+        android:adjustViewBounds="true"
         android:scaleType="fitXY"
+        android:id="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/menup_barra"
+        android:layout_alignParentTop="true"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:src="@drawable/menup_aguas_tipo"
+        android:id="@+id/aguas_tipo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        />
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/menup_boton2"
+        android:id="@+id/glosario"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:onClick="returnToMainMap" />
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:onClick="returnToMainMap"/>
 
 </RelativeLayout>
