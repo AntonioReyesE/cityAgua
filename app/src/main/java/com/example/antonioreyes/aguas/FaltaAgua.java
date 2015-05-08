@@ -118,7 +118,7 @@ public class FaltaAgua extends Activity {
     }
 
     public void showDateWidget(View v){
-            showDialog(1);
+        showDialog(1);
     }
 
     private TimePickerDialog.OnTimeSetListener myTimeListener =  new TimePickerDialog.OnTimeSetListener() {
