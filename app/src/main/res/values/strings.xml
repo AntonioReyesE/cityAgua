@@ -28,5 +28,6 @@
     <string name="cfe"><u>071</u></string>
     <string name="semadet"><u>33333333</u></string>
     <string name="siapa"><u>36682482</u></string>
+    <string name="title_activity_informacion">Informacion</string>
 
 </resources>

@@ -159,4 +159,11 @@ public class MapsActivity extends FragmentActivity implements LocationListener {
         Intent intent = new Intent(this, Emergencias.class);
         startActivity(intent);
     }
+
+    public void showInformacion(View view){
+        Intent intent = new Intent(this, Informacion.class);
+        startActivity(intent);
+    }
+
+
 }
