@@ -70,6 +70,22 @@
             android:name=".Informacion"
             android:label="@string/title_activity_informacion" >
         </activity>
+        <activity
+            android:name=".Recomendaciones"
+            android:label="@string/title_activity_recomendaciones" >
+        </activity>
+        <activity
+            android:name=".GlosarioTerminos"
+            android:label="@string/title_activity_glosario_terminos" >
+        </activity>
+        <activity
+            android:name=".Cuencas"
+            android:label="@string/title_activity_cuencas" >
+        </activity>
+        <activity
+            android:name=".Acerca"
+            android:label="@string/title_activity_acerca" >
+        </activity>
     </application>
 
 </manifest>

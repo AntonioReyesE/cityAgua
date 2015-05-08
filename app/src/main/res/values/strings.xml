@@ -29,5 +29,9 @@
     <string name="semadet"><u>33333333</u></string>
     <string name="siapa"><u>36682482</u></string>
     <string name="title_activity_informacion">Informacion</string>
+    <string name="title_activity_recomendaciones">Recomendaciones</string>
+    <string name="title_activity_glosario_terminos">GlosarioTerminos</string>
+    <string name="title_activity_cuencas">Cuencas</string>
+    <string name="title_activity_acerca">Acerca</string>
 
 </resources>

@@ -1,12 +1,127 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent"
     tools:context="com.example.antonioreyes.aguas.Informacion">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/info_fondo"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:id="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/menup_barra"
+        android:layout_alignParentTop="true"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:src="@drawable/menup_aguas_tipo"
+        android:id="@+id/aguas_tipo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/menup_boton1"
+        android:id="@+id/emergencia"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="emergencias"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/menup_boton3"
+        android:id="@+id/glosario"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:onClick="showInformacion"
+        android:clickable="true"/>
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/info_icono2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:id="@+id/info_icon"
+        />
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/texto_informacion"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/info_icon"
+        android:id="@+id/texto_info"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/texto_recomendaciones"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/texto_info"
+        android:id="@+id/texto_recomen"
+        android:layout_marginTop="25dp"
+        android:onClick="recomendaciones"
+        android:clickable="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/texto_glosario_term"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/texto_recomen"
+        android:id="@+id/texto_glosario_terminos"
+        android:layout_marginTop="25dp"
+        android:onClick="glosarioTerminos"
+        android:clickable="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cuenca"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/texto_glosario_terminos"
+        android:id="@+id/cuencas"
+        android:layout_marginTop="25dp"
+        android:onClick="cuencas"
+        android:clickable="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/acerca"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cuencas"
+        android:id="@+id/acerca"
+        android:layout_marginTop="25dp"
+        android:onClick="acerca"
+        android:clickable="true"/>
+
+
+
+
+
 
 </RelativeLayout>
