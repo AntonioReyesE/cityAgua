@@ -7,6 +7,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +19,12 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+
+import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements LocationListener {
 
@@ -47,6 +54,8 @@ public class MapsActivity extends FragmentActivity implements LocationListener {
         }
         //locationManager.requestLocationUpdates(bestProvider, 10000, 0,this); //Returns marker to current position in a defined time
         setUpMapIfNeeded();
+
+        getReports();
     }
 
     @Override
@@ -163,6 +172,29 @@ public class MapsActivity extends FragmentActivity implements LocationListener {
     public void showInformacion(View view){
         Intent intent = new Intent(this, Informacion.class);
         startActivity(intent);
+    }
+
+    public void setMarkers(List<ParseObject> list){
+        for (ParseObject temp : list) {
+            Log.d("OBJECT", temp.getString("Tipo_Reporte"));
+            Log.d("OBJECT", String.valueOf(temp.getDouble("Latitud")) );
+            Log.d("OBJECT", String.valueOf(temp.getDouble("Longitud")) );
+        }
+    }
+
+    public void getReports(){
+        ParseQuery<ParseObject> query = ParseQuery.getQuery("Report");
+        query.findInBackground(new FindCallback<ParseObject>() {
+            public void done(List<ParseObject> list, ParseException e) {
+                if (e == null) {
+                    // Success
+                    setMarkers(list);
+                } else {
+                    // Error
+                    Log.d("score", "Error: " + e.getMessage());
+                }
+            }
+        });
     }
 
 
