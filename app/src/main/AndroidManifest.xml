@@ -13,6 +13,9 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <!-- Call permission -->
+    <uses-permission android:name="android.permission.CALL_PHONE" ></uses-permission>
+
     <application
         android:name=".ParseApplication"
         android:allowBackup="true"
@@ -29,7 +32,6 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" >
-
         </activity>
         <activity
             android:name=".formulario_reporte"
@@ -87,6 +89,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".Emergencias"
+            android:label="@string/title_activity_emergencias" >
         </activity>
     </application>
 

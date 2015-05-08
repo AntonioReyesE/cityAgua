@@ -1,0 +1,189 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.antonioreyes.aguas.Emergencias">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo_reportes"
+        android:scaleType="fitXY"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:id="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/menup_barra"
+        android:layout_alignParentTop="true"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:src="@drawable/menup_aguas_tipo"
+        android:id="@+id/aguas_tipo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        />
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/menup_boton2"
+        android:id="@+id/glosario"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:onClick="returnFromEmergencias"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/menup_boton1"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/imageView2"
+        android:layout_marginTop="25dp"
+        android:id="@+id/emergencia"/>
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/texto_emergencias"
+        android:layout_below="@id/emergencia"
+        android:id="@+id/im_emergencias"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BOMBEROS"
+        android:id="@+id/tv_bomberos"
+        android:layout_below="@+id/im_emergencias"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bomberos"
+        android:id="@+id/tel_bomberos"
+        android:layout_below="@id/im_emergencias"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_alignParentRight="true"
+        android:onClick="callBomberos"
+        android:clickable="true"
+        android:textColor="@color/blue"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VIALIDAD"
+        android:layout_below="@id/tv_bomberos"
+        android:id="@+id/tv_vialidad"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vialidad"
+        android:id="@+id/tel_vialidad"
+        android:layout_below="@id/tel_bomberos"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_alignParentRight="true"
+        android:onClick="callVialidad"
+        android:clickable="true"
+        android:textColor="@color/blue"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CFE"
+        android:layout_below="@id/tv_vialidad"
+        android:id="@+id/tv_cfe"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cfe"
+        android:id="@+id/tel_cfe"
+        android:layout_below="@id/tel_vialidad"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_alignParentRight="true"
+        android:onClick="callCFE"
+        android:clickable="true"
+        android:textColor="@color/blue"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEMADET"
+        android:layout_below="@id/tv_cfe"
+        android:id="@+id/tv_semadet"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/semadet"
+        android:id="@+id/tel_semadet"
+        android:layout_below="@id/tel_cfe"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_alignParentRight="true"
+        android:onClick="callSEMADET"
+        android:clickable="true"
+        android:textColor="@color/blue"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIAPA"
+        android:layout_below="@id/tv_semadet"
+        android:id="@+id/tv_siapa"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/siapa"
+        android:id="@+id/tel_siapa"
+        android:layout_below="@id/tel_semadet"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_alignParentRight="true"
+        android:onClick="callSIAPA"
+        android:clickable="true"
+        android:textColor="@color/blue"
+        />
+
+</RelativeLayout>

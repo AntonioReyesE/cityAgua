@@ -19,4 +19,14 @@
     <string name="title_activity_confirmation">Confirmation</string>
     <string name="title_activity_splash">splash</string>
     <string name="nombre_app">¡AGUAS!</string>
+    <string name="title_activity_emergencias">Emergencias</string>
+
+
+    <!--Telephones -->
+    <string name="bomberos"><u>36195242</u></string>
+    <string name="vialidad"><u>32248484</u></string>
+    <string name="cfe"><u>071</u></string>
+    <string name="semadet"><u>33333333</u></string>
+    <string name="siapa"><u>36682482</u></string>
+
 </resources>
