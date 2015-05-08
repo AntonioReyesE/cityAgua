@@ -1,7 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.antonioreyes.aguas.Informacion">
+    tools:context="com.example.antonioreyes.aguas.Informacion"
+    android:clickable="false">
 
     <ImageView
         android:layout_width="match_parent"
@@ -31,28 +32,18 @@
         android:layout_marginTop="13dp"
         />
 
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/menup_boton1"
-        android:id="@+id/emergencia"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:onClick="emergencias"/>
 
     <ImageView
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:src="@drawable/menup_boton3"
-        android:id="@+id/glosario"
+        android:src="@drawable/menup_boton2"
+        android:id="@+id/imageButton3"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
-        android:onClick="showInformacion"
-        android:clickable="true"/>
+        android:onClick="regresaInformacion"
+        android:clickable="true" />
 
     <ImageView
         android:layout_width="90dp"

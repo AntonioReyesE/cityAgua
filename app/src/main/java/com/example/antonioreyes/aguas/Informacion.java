@@ -59,4 +59,8 @@ public class Informacion extends Activity {
         Intent intent = new Intent(this, Acerca.class);
         startActivity(intent);
     }
+
+    public void regresaInformacion(View view){
+        finish();
+    }
 }

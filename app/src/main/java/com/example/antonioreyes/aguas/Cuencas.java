@@ -1,12 +1,14 @@
 package com.example.antonioreyes.aguas;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
-public class Cuencas extends ActionBarActivity {
+public class Cuencas extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,5 +37,9 @@ public class Cuencas extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void regresarCuenca(View view){
+        finish();
     }
 }

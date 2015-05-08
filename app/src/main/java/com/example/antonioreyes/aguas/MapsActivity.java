@@ -5,6 +5,7 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.media.Image;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,7 +18,9 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -176,9 +179,48 @@ public class MapsActivity extends FragmentActivity implements LocationListener {
 
     public void setMarkers(List<ParseObject> list){
         for (ParseObject temp : list) {
+            /*
             Log.d("OBJECT", temp.getString("Tipo_Reporte"));
             Log.d("OBJECT", String.valueOf(temp.getDouble("Latitud")) );
             Log.d("OBJECT", String.valueOf(temp.getDouble("Longitud")) );
+            */
+            String tipo = temp.getString("Tipo_Reporte");
+            double lat = temp.getDouble("Latitud");
+            double lon = temp.getDouble("Longitud");
+            String comentario = temp.getString("Comentario");
+            LatLng coordenadas = new LatLng(lat, lon);
+            int img = 0;
+            switch (tipo){
+                case "Falta de Agua":
+                    img = R.drawable.marcadores_03;
+                    break;
+                case "Agua contaminada":
+                    img = R.drawable.marcadores_02;
+                    break;
+                case "Inundaciones":
+                    img = R.drawable.marcadores_01;
+                    break;
+                case "Encharcamientos":
+                    img = R.drawable.marcadores_04;
+                    break;
+                case "Fugas de agua":
+                    img = R.drawable.marcadores_05;
+                    break;
+                case "Deslaves":
+                    img = R.drawable.marcadores_06;
+                    break;
+                case "Socavamientos":
+                    img = R.drawable.marcadores_07;
+                    break;
+                case "Infraestructura":
+                    img = R.drawable.marcadores_08;
+                    break;
+            }
+            Marker mark = mMap.addMarker(new MarkerOptions()
+            .position(coordenadas)
+            .title(tipo)
+            .snippet(comentario)
+            .icon(BitmapDescriptorFactory.fromResource(img)));
         }
     }
 
