@@ -1,18 +1,13 @@
 package com.example.antonioreyes.aguas;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
-
-import com.google.android.gms.maps.model.LatLng;
 
 
 public class MainActivity extends Activity {
@@ -31,9 +26,9 @@ public class MainActivity extends Activity {
             "INFRAESTRUCTURA EN RIESGO"
     } ;
     Integer[] imageId = {
-            R.drawable.boton_reportar_on_03,
-            R.drawable.boton_reportar_on_02,
             R.drawable.boton_reportar_on_01,
+            R.drawable.boton_reportar_on_02,
+            R.drawable.boton_reportar_on_03,
             R.drawable.boton_reportar_on_04,
             R.drawable.boton_reportar_on_05,
             R.drawable.boton_reportar_on_06,
