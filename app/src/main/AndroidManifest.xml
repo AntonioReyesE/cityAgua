@@ -46,36 +46,8 @@
             android:label="@string/title_activity_main" >
         </activity>
         <activity
-            android:name=".ContaminacionAgua"
-            android:label="@string/title_activity_contaminacion_agua" >
-        </activity>
-        <activity
-            android:name=".Deslaves"
-            android:label="@string/title_activity_deslaves" >
-        </activity>
-        <activity
-            android:name=".Encharcamientos"
-            android:label="@string/title_activity_encharcamientos" >
-        </activity>
-        <activity
             android:name=".ReportActivity"
             android:label="@string/title_activity_falta_agua" >
-        </activity>
-        <activity
-            android:name=".FugaAgua"
-            android:label="@string/title_activity_fuga_agua" >
-        </activity>
-        <activity
-            android:name=".Hundimientos"
-            android:label="@string/title_activity_hundimientos" >
-        </activity>
-        <activity
-            android:name=".Infraestructura"
-            android:label="@string/title_activity_infraestructura" >
-        </activity>
-        <activity
-            android:name=".Inundaciones"
-            android:label="@string/title_activity_inundaciones" >
         </activity>
         <activity
             android:name=".Confirmation"
