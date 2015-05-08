@@ -71,6 +71,7 @@ public class ReportActivity extends Activity {
         commentTV = (EditText) findViewById(R.id.commentTV);
         typeSP = (Spinner) findViewById(R.id.typeSP);
         typeLB = (TextView) findViewById(R.id.typeLB);
+        imagePreviewIV = (ImageView) findViewById(R.id.imagePreview);
 
         calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);
@@ -231,20 +232,18 @@ public class ReportActivity extends Activity {
         }
 
 
-        Bitmap bitmap = ((BitmapDrawable) imagePreviewIV.getDrawable()).getBitmap();
 
-        ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
-        byte[] image = stream.toByteArray();
+        if(imagePreviewIV.getDrawable() != null){
+            Bitmap bitmap = ((BitmapDrawable) imagePreviewIV.getDrawable()).getBitmap();
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+            byte[] image = stream.toByteArray();
 
-        ParseFile file = new ParseFile("androidbegin.png", image);
-        file.saveInBackground();
+            ParseFile file = new ParseFile("image.png", image);
+            file.saveInBackground();
 
-        p.put("ImageFile", file);
-
-        // Show a simple toast message
-        Toast.makeText(this, "Image Uploaded",
-                Toast.LENGTH_SHORT).show();
+            p.put("ImageFile", file);
+        }
 
         p.saveInBackground(new SaveCallback() {
             public void done(ParseException e) {
@@ -295,7 +294,6 @@ public class ReportActivity extends Activity {
             Toast.makeText(this, picturePath, Toast.LENGTH_LONG);
             cursor.close();
 
-            imagePreviewIV = (ImageView) findViewById(R.id.imagePreview);
             imagePreviewIV.setImageBitmap( BitmapFactory.decodeFile(picturePath) );
         }else{
             Toast.makeText(this, "Error", Toast.LENGTH_LONG);
