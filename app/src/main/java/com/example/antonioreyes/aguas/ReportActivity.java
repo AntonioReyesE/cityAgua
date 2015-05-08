@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -28,6 +29,7 @@ public class ReportActivity extends ActionBarActivity {
 
     private int type;
 
+    private ImageView titleIM;
     private EditText dateTV;
     private EditText timeTV;
     private EditText placeTV;
@@ -48,6 +50,8 @@ public class ReportActivity extends ActionBarActivity {
 
         Intent intent = getIntent();
         type = intent.getIntExtra("type", -1);
+
+        titleIM = (ImageView) findViewById(R.id.title_image);
 
         dateTV = (EditText) findViewById(R.id.dateTV);
         timeTV = (EditText) findViewById(R.id.timeTV);
@@ -78,6 +82,8 @@ public class ReportActivity extends ActionBarActivity {
                 setSpinnerAdapter(type);
                 break;
         }
+
+        setTitleImage();
 
         p = new ParseObject("Report");
     }
@@ -171,6 +177,35 @@ public class ReportActivity extends ActionBarActivity {
      */
 
     public void saveReport(View v){
+        switch (type){
+            case 0:
+                p.put("Tipo_Reporte", "Falta de agua");
+                break;
+            case 1:
+                p.put("Tipo_Reporte", "Agua contaminada");
+                break;
+            case 2:
+                p.put("Tipo_Reporte", "Inundaciones");
+                break;
+            case 3:
+                p.put("Tipo_Reporte", "Encharcamientos");
+                break;
+            case 4:
+                p.put("Tipo_Reporte", "Fugas de agua");
+                break;
+            case 5:
+                p.put("Tipo_Reporte", "Deslaves");
+                break;
+            case 6:
+                p.put("Tipo_Reporte", "Socavamientos");
+                break;
+            case 7:
+                p.put("Tipo_Reporte", "Infraestructura");
+                break;
+            default:
+                p.put("Tipo_Reporte", "Desconocido");
+        }
+        
         p.put( "Tipo_Reporte", "Falta de Agua");
         p.put( "Fecha", dateTV.getText().toString() );
         p.put( "Hora", timeTV.getText().toString() );
@@ -238,6 +273,7 @@ public class ReportActivity extends ActionBarActivity {
                 };
                 break;
             case 2:
+                typeLB.setText("Nivel");
                 values = new String[]{ "Calle: inundación baja",
                     "Banqueta: inundación media",
                     "Casa: inundación alta"
@@ -261,6 +297,35 @@ public class ReportActivity extends ActionBarActivity {
                 values);
 
         typeSP.setAdapter(adapter);
+    }
+
+    public void setTitleImage(){
+        switch (type){
+            case 0:
+                titleIM.setImageResource(R.drawable.boton_reportar_on_01);
+                break;
+            case 1:
+                titleIM.setImageResource(R.drawable.boton_reportar_on_02);
+                break;
+            case 2:
+                titleIM.setImageResource(R.drawable.boton_reportar_on_03);
+                break;
+            case 3:
+                titleIM.setImageResource(R.drawable.boton_reportar_on_04);
+                break;
+            case 4:
+                titleIM.setImageResource(R.drawable.boton_reportar_on_05);
+                break;
+            case 5:
+                titleIM.setImageResource(R.drawable.boton_reportar_on_06);
+                break;
+            case 6:
+                titleIM.setImageResource(R.drawable.boton_reportar_on_07);
+                break;
+            case 7:
+                titleIM.setImageResource(R.drawable.boton_reportar_on_08);
+                break;
+        }
     }
 
 }
