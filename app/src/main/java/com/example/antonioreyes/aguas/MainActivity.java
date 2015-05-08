@@ -46,8 +46,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = getIntent();
-
         CustomList adapter = new
                 CustomList(MainActivity.this, web, imageId);
 
@@ -59,81 +57,14 @@ public class MainActivity extends Activity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 //magic will happen -> case which will send you to the correct report
-                Toast.makeText(MainActivity.this, "You Clicked at " +web[+ position], Toast.LENGTH_SHORT).show();
-                if(position == 0){
-                    faltaAgua(view);
-                }
-                else if(position == 1){
-                    contaminacionAgua(view);
-                }
-                else if(position == 2){
-                    inundaciones(view);
-                }
-                else if(position == 3){
-                    encharcamientos(view);
-                }
-                else if(position == 4){
-                    fugaAgua(view);
-                }
-                else if(position == 5){
-                    deslaves(view);
-                }
-                else if(position == 6){
-                    hundimientos(view);
-                }
-                else if(position == 7){
-                    infraestructura(view);
-                }
+
+                //Toast.makeText(MainActivity.this, "You Clicked at " +web[+ position], Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getApplicationContext(), FaltaAgua.class);
+                intent.putExtra("type", position);
+                startActivity(intent);
             }
         });
-    }
-
-    public void faltaAgua(View view){
-        Intent intent = new Intent(this, FaltaAgua.class);
-        startActivity(intent);
-        this.finish();
-    }
-
-    public void contaminacionAgua(View view){
-        Intent intent = new Intent(this, ContaminacionAgua.class);
-        startActivity(intent);
-        this.finish();
-    }
-
-    public void inundaciones(View view){
-        Intent intent = new Intent(this, Inundaciones.class);
-        startActivity(intent);
-        this.finish();
-    }
-
-    public void encharcamientos(View view){
-        Intent intent = new Intent(this, Encharcamientos.class);
-        startActivity(intent);
-        this.finish();
-    }
-
-    public void fugaAgua(View view){
-        Intent intent = new Intent(this, FugaAgua.class);
-        startActivity(intent);
-        this.finish();
-    }
-
-    public void deslaves(View view){
-        Intent intent = new Intent(this, Deslaves.class);
-        startActivity(intent);
-        this.finish();
-    }
-
-    public void hundimientos(View view){
-        Intent intent = new Intent(this, Hundimientos.class);
-        startActivity(intent);
-        this.finish();
-    }
-
-    public void infraestructura(View view){
-        Intent intent = new Intent(this, Infraestructura.class);
-        startActivity(intent);
-        this.finish();
     }
 
     @Override
