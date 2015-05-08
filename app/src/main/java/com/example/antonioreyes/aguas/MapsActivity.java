@@ -215,17 +215,25 @@ public class MapsActivity extends FragmentActivity implements LocationListener {
                 case "Infraestructura":
                     img = R.drawable.marcadores_08;
                     break;
+                default:
+                    img = R.drawable.marcadores_01;
             }
-            Marker mark = mMap.addMarker(new MarkerOptions()
-            .position(coordenadas)
-            .title(tipo)
-            .snippet(comentario)
-            .icon(BitmapDescriptorFactory.fromResource(img)));
+            MarkerOptions mo = new MarkerOptions();
+            mo.position(coordenadas);
+            mo.title(tipo);
+            if(comentario != null){
+                mo.snippet(comentario);
+            }
+            mo.icon(BitmapDescriptorFactory.fromResource(img));
+            if(mo != null){
+                mMap.addMarker(mo);
+            }
         }
     }
 
     public void getReports(){
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Report");
+        query.setLimit(1000);
         query.findInBackground(new FindCallback<ParseObject>() {
             public void done(List<ParseObject> list, ParseException e) {
                 if (e == null) {
