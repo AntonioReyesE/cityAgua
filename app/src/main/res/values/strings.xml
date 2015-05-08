@@ -18,4 +18,5 @@
     <string name="title_activity_inundaciones">Inundaciones</string>
     <string name="title_activity_confirmation">Confirmation</string>
     <string name="title_activity_splash">splash</string>
+    <string name="nombre_app">¡AGUAS!</string>
 </resources>

@@ -23,7 +23,7 @@ import com.parse.SaveCallback;
 
 import java.util.Calendar;
 
-public class FaltaAgua extends ActionBarActivity {
+public class FaltaAgua extends Activity {
 
     public EditText dateTV;
     public EditText timeTV;
