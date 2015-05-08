@@ -41,6 +41,17 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:clickable="true"
-        android:onClick="regresaInformacion" />
+        android:onClick="regresarAcerca" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/acerca_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:id="@+id/info_icon"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginBottom="120dp"
+        />
 
 </RelativeLayout>

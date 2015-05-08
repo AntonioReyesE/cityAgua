@@ -71,6 +71,7 @@
         android:layout_below="@+id/texto_info"
         android:id="@+id/texto_recomen"
         android:layout_marginTop="25dp"
+        android:layout_marginLeft="40dp"
         android:onClick="recomendaciones"
         android:clickable="true"/>
 
@@ -83,6 +84,7 @@
         android:layout_below="@+id/texto_recomen"
         android:id="@+id/texto_glosario_terminos"
         android:layout_marginTop="25dp"
+        android:layout_marginLeft="40dp"
         android:onClick="glosarioTerminos"
         android:clickable="true"/>
 
@@ -95,6 +97,7 @@
         android:layout_below="@+id/texto_glosario_terminos"
         android:id="@+id/cuencas"
         android:layout_marginTop="25dp"
+        android:layout_marginLeft="40dp"
         android:onClick="cuencas"
         android:clickable="true"/>
 
@@ -107,6 +110,7 @@
         android:layout_below="@+id/cuencas"
         android:id="@+id/acerca"
         android:layout_marginTop="25dp"
+        android:layout_marginLeft="40dp"
         android:onClick="acerca"
         android:clickable="true"/>
 

@@ -155,4 +155,8 @@ public class MapsActivity2 extends FragmentActivity implements LocationListener 
         //startActivity(intent);
        // this.finish();
     }
+
+    public void regresarFormulario(View view){
+        finish();
+    }
 }

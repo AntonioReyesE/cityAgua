@@ -45,4 +45,15 @@
         android:onClick="regresarRecomendaciones"
         android:clickable="true" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/recomendaciones_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:id="@+id/info_icon"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginBottom="120dp"
+        />
+
 </RelativeLayout>
