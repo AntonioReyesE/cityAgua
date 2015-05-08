@@ -5,6 +5,10 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -27,6 +31,7 @@ import java.util.Calendar;
 
 public class ReportActivity extends Activity {
 
+    private final int RESULT_LOAD_IMAGE = 10;
     private int type;
 
     private ImageView titleIM;
@@ -247,17 +252,44 @@ public class ReportActivity extends Activity {
         startActivityForResult(intent, 1);
     }
 
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        Toast.makeText(this, requestCode + " " + resultCode, Toast.LENGTH_LONG);
+
         if (requestCode == 1 && resultCode == Activity.RESULT_OK){
             Globals.latitude = data.getDoubleExtra("latitude", 1);
             Globals.longitude = data.getDoubleExtra("longitude", 1);
             updateLocation();
+        }else if(requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK){
+            Uri selectedImage = data.getData();
+            String[] filePathColumn = { MediaStore.Images.Media.DATA };
+
+            Cursor cursor = getContentResolver().query(selectedImage,
+                    filePathColumn, null, null, null);
+            cursor.moveToFirst();
+
+            int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+            String picturePath = cursor.getString(columnIndex);
+            Toast.makeText(this, picturePath, Toast.LENGTH_LONG);
+            cursor.close();
+
+            ImageView imageView = (ImageView) findViewById(R.id.imagePreview);
+            imageView.setImageBitmap( BitmapFactory.decodeFile(picturePath) );
+        }else{
+            Toast.makeText(this, "Error", Toast.LENGTH_LONG);
         }
     }
 
     public void updateLocation(){
         placeTV.setText(Globals.latitude + ", " + Globals.longitude);
     }
+
+    public void selectImage(View v){
+        Intent i = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+        startActivityForResult(i, RESULT_LOAD_IMAGE);
+    }
+
 
     public void setSpinnerAdapter(int type){
 
