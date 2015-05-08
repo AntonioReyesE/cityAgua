@@ -5,6 +5,12 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -20,13 +26,16 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.parse.ParseException;
+import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.SaveCallback;
 
+import java.io.ByteArrayOutputStream;
 import java.util.Calendar;
 
 public class ReportActivity extends Activity {
 
+    private final int RESULT_LOAD_IMAGE = 10;
     private int type;
 
     private ImageView titleIM;
@@ -36,6 +45,8 @@ public class ReportActivity extends Activity {
     private EditText commentTV;
     private Spinner typeSP;
     private TextView typeLB;
+
+    private ImageView imagePreviewIV;
 
 
     private Calendar calendar;
@@ -177,6 +188,7 @@ public class ReportActivity extends Activity {
      */
 
     public void saveReport(View v){
+
         switch (type){
             case 0:
                 p.put("Tipo_Reporte", "Falta de agua");
@@ -205,8 +217,7 @@ public class ReportActivity extends Activity {
             default:
                 p.put("Tipo_Reporte", "Desconocido");
         }
-        
-        p.put( "Tipo_Reporte", "Falta de Agua");
+
         p.put( "Fecha", dateTV.getText().toString() );
         p.put( "Hora", timeTV.getText().toString() );
         p.put( "Latitud", Globals.latitude );
@@ -218,6 +229,22 @@ public class ReportActivity extends Activity {
                 p.put( "Tipo", typeSP.getSelectedItem().toString() );
                 break;
         }
+
+
+        Bitmap bitmap = ((BitmapDrawable) imagePreviewIV.getDrawable()).getBitmap();
+
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        byte[] image = stream.toByteArray();
+
+        ParseFile file = new ParseFile("androidbegin.png", image);
+        file.saveInBackground();
+
+        p.put("ImageFile", file);
+
+        // Show a simple toast message
+        Toast.makeText(this, "Image Uploaded",
+                Toast.LENGTH_SHORT).show();
 
         p.saveInBackground(new SaveCallback() {
             public void done(ParseException e) {
@@ -247,17 +274,44 @@ public class ReportActivity extends Activity {
         startActivityForResult(intent, 1);
     }
 
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        Toast.makeText(this, requestCode + " " + resultCode, Toast.LENGTH_LONG);
+
         if (requestCode == 1 && resultCode == Activity.RESULT_OK){
             Globals.latitude = data.getDoubleExtra("latitude", 1);
             Globals.longitude = data.getDoubleExtra("longitude", 1);
             updateLocation();
+        }else if(requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK){
+            Uri selectedImage = data.getData();
+            String[] filePathColumn = { MediaStore.Images.Media.DATA };
+
+            Cursor cursor = getContentResolver().query(selectedImage,
+                    filePathColumn, null, null, null);
+            cursor.moveToFirst();
+
+            int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+            String picturePath = cursor.getString(columnIndex);
+            Toast.makeText(this, picturePath, Toast.LENGTH_LONG);
+            cursor.close();
+
+            imagePreviewIV = (ImageView) findViewById(R.id.imagePreview);
+            imagePreviewIV.setImageBitmap( BitmapFactory.decodeFile(picturePath) );
+        }else{
+            Toast.makeText(this, "Error", Toast.LENGTH_LONG);
         }
     }
 
     public void updateLocation(){
         placeTV.setText(Globals.latitude + ", " + Globals.longitude);
     }
+
+    public void selectImage(View v){
+        Intent i = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+        startActivityForResult(i, RESULT_LOAD_IMAGE);
+    }
+
 
     public void setSpinnerAdapter(int type){
 
