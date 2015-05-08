@@ -25,7 +25,7 @@ import com.parse.SaveCallback;
 
 import java.util.Calendar;
 
-public class ReportActivity extends ActionBarActivity {
+public class ReportActivity extends Activity {
 
     private int type;
 
