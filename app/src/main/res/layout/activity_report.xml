@@ -92,18 +92,18 @@
             android:onClick="showDateWidget"
             />
 
-        <ImageButton
+        <ImageView
             android:layout_width="70dp"
             android:layout_height="50dp"
             android:id="@+id/changeTimeBtn"
-            android:src="@drawable/rel"
-            android:scaleType="fitXY"
+            android:src="@drawable/reporte_boton_hora"
             android:layout_below="@+id/textView2"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="15dp"
-            android:onClick="showTimeWidget" />
+            android:onClick="showTimeWidget"
+            />
 
         <EditText
             android:layout_width="wrap_content"

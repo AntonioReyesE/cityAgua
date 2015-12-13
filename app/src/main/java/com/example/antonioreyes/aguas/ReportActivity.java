@@ -177,7 +177,15 @@ public class ReportActivity extends Activity {
     };
 
     public void setTime(){
-        timeTV.setText(new StringBuilder().append(hour).append(":").append(minute));
+        String min_tmp;
+        if(minute < 10 && minute > 0){
+            min_tmp = "0" + String.valueOf(minute);
+        } else if (minute == 0){
+            min_tmp = "00";
+        }else{
+            min_tmp = String.valueOf(minute);
+        }
+        timeTV.setText(new StringBuilder().append(hour).append(":").append(min_tmp));
     }
 
     public void showTimeWidget(View v){

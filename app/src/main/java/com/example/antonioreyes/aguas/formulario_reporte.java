@@ -117,8 +117,10 @@ public class formulario_reporte extends ActionBarActivity {
 
     private void showTime(int hour, int minute) {
         String min_tmp;
-        if(minute < 10){
-            min_tmp = '0' + String.valueOf(minute);
+        if(minute < 10 && minute > 0){
+            min_tmp = "0" + String.valueOf(minute);
+        } else if (minute == 0){
+            min_tmp = "00";
         }else{
             min_tmp = String.valueOf(minute);
         }
