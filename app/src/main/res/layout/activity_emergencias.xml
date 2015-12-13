@@ -64,7 +64,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BOMBEROS"
+        android:text="Bomberos y Protección Civil"
         android:id="@+id/tv_bomberos"
         android:layout_below="@+id/im_emergencias"
         android:layout_marginLeft="50dp"
@@ -89,8 +89,83 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="VIALIDAD"
+        android:text="Cruz Roja"
         android:layout_below="@id/tv_bomberos"
+        android:id="@+id/tv_cruz_roja"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cruzroja"
+        android:id="@+id/tel_cruz_roja"
+        android:layout_below="@id/tel_bomberos"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_alignParentRight="true"
+        android:onClick="callCRUZROJA"
+        android:clickable="true"
+        android:textColor="@color/blue"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIAPA"
+        android:layout_below="@id/tv_cruz_roja"
+        android:id="@+id/tv_siapa"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/siapa"
+        android:id="@+id/tel_siapa"
+        android:layout_below="@id/tel_cruz_roja"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_alignParentRight="true"
+        android:onClick="callSIAPA"
+        android:clickable="true"
+        android:textColor="@color/blue"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEMADET (opción 2)"
+        android:layout_below="@id/tv_siapa"
+        android:id="@+id/tv_semadet"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/semadet"
+        android:id="@+id/tel_semadet"
+        android:layout_below="@id/tel_siapa"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:layout_alignParentRight="true"
+        android:onClick="callSEMADET"
+        android:clickable="true"
+        android:textColor="@color/blue"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vialidad (opción 2)"
+        android:layout_below="@id/tv_semadet"
         android:id="@+id/tv_vialidad"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="20dp"
@@ -102,7 +177,7 @@
         android:layout_height="wrap_content"
         android:text="@string/vialidad"
         android:id="@+id/tel_vialidad"
-        android:layout_below="@id/tel_bomberos"
+        android:layout_below="@id/tel_semadet"
         android:layout_marginTop="20dp"
         android:layout_marginRight="50dp"
         android:layout_alignParentRight="true"
@@ -114,7 +189,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CFE"
+        android:text="CFE (falla por lluvias)"
         android:layout_below="@id/tv_vialidad"
         android:id="@+id/tv_cfe"
         android:layout_marginLeft="50dp"
@@ -132,56 +207,6 @@
         android:layout_marginRight="50dp"
         android:layout_alignParentRight="true"
         android:onClick="callCFE"
-        android:clickable="true"
-        android:textColor="@color/blue"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SEMADET"
-        android:layout_below="@id/tv_cfe"
-        android:id="@+id/tv_semadet"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_alignParentLeft="true"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/semadet"
-        android:id="@+id/tel_semadet"
-        android:layout_below="@id/tel_cfe"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="50dp"
-        android:layout_alignParentRight="true"
-        android:onClick="callSEMADET"
-        android:clickable="true"
-        android:textColor="@color/blue"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SIAPA"
-        android:layout_below="@id/tv_semadet"
-        android:id="@+id/tv_siapa"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_alignParentLeft="true"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/siapa"
-        android:id="@+id/tel_siapa"
-        android:layout_below="@id/tel_semadet"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="50dp"
-        android:layout_alignParentRight="true"
-        android:onClick="callSIAPA"
         android:clickable="true"
         android:textColor="@color/blue"
         />

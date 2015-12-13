@@ -47,13 +47,13 @@ public class Emergencias extends Activity {
 
     public void callBomberos(View view){
         Intent intent = new Intent(Intent.ACTION_CALL);
-        intent.setData(Uri.parse("tel:36195242"));
+        intent.setData(Uri.parse("tel:066"));
         startActivity(intent);
     }
 
     public void callVialidad(View view){
         Intent intent = new Intent(Intent.ACTION_CALL);
-        intent.setData(Uri.parse("tel:32248484"));
+        intent.setData(Uri.parse("tel:38192400"));
         startActivity(intent);
     }
 
@@ -65,19 +65,20 @@ public class Emergencias extends Activity {
 
     public void callSEMADET(View view){
         Intent intent = new Intent(Intent.ACTION_CALL);
-        intent.setData(Uri.parse("tel:33333333"));
+        intent.setData(Uri.parse("tel:30308250"));
         startActivity(intent);
     }
 
     public void callSIAPA(View view){
         Intent intent = new Intent(Intent.ACTION_CALL);
-        intent.setData(Uri.parse("tel:36682482"));
+        intent.setData(Uri.parse("tel:073"));
         startActivity(intent);
     }
 
-
-
-
-
+    public void callCRUZROJA(View view){
+        Intent intent = new Intent(Intent.ACTION_CALL);
+        intent.setData(Uri.parse("tel:065"));
+        startActivity(intent);
+    }
 
 }

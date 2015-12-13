@@ -23,11 +23,12 @@
 
 
     <!--Telephones -->
-    <string name="bomberos"><u>36195242</u></string>
-    <string name="vialidad"><u>32248484</u></string>
+    <string name="bomberos"><u>066</u></string>
+    <string name="vialidad"><u>38192400</u></string>
     <string name="cfe"><u>071</u></string>
-    <string name="semadet"><u>33333333</u></string>
-    <string name="siapa"><u>36682482</u></string>
+    <string name="semadet"><u>30308250</u></string>
+    <string name="siapa"><u>073</u></string>
+    <string name="cruzroja"><u>065</u></string>
     <string name="title_activity_informacion">Informacion</string>
     <string name="title_activity_recomendaciones">Recomendaciones</string>
     <string name="title_activity_glosario_terminos">GlosarioTerminos</string>
