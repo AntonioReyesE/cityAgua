@@ -19,7 +19,7 @@
     <application
         android:name=".ParseApplication"
         android:allowBackup="true"
-        android:icon="@drawable/logotipo"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/nombre_app"
         android:theme="@style/AppTheme" >
         <meta-data
