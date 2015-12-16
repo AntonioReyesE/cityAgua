@@ -43,15 +43,326 @@
         android:clickable="true"
         android:onClick="regresarAcerca" />
 
-    <ImageView
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_below="@+id/imageView2"
+        android:id="@+id/textviewvac"
+        android:text=""/>
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/acerca_img"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="ACERCA DEL PROYECTO"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:id="@+id/info_icon"
-        android:layout_below="@+id/imageView2"
-        android:layout_marginBottom="120dp"
+        android:layout_below="@+id/textviewvac"
+        android:id="@+id/textviewtit"
+        android:typeface="monospace"
+        android:textColor="@android:color/holo_blue_light"
         />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/textviewtit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:fillViewport="false">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="¡AGUAS! Reporte Hídrico Ciudadano es una aplicación móvil y plataforma virtual para reportar situaciones con el agua sobre el suministro, saneamiento, manejo del agua de lluvia o fallas en la infraestructura."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Su objetivo principal es conocer a través del reporte de los ciudadanos, en el momento o a posteriori, la situación del agua en las cuencas hidrológicas de la ciudad. La información que se genere será gran utilidad para mejorar el conocimiento y las decisiones sobre la dinámica del agua en la metrópoli así como para investigar, monitorear, prevenir contingencias y planear mejor su atención."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Los incidentes de agua que se podrán reportar son:"
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="1. Zonas de falta de agua (hora y duración de la falta del suministro)."
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="2. Contaminación del agua y del suelo (tipo, origen, color y descripción del incidente)."
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="3. Inundaciones (hora, nivel del agua, origen, velocidad y descripción del evento)."
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="4. Encharcamientos (hora y descripción del evento)."
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="5. Deslaves (hora y descripción del evento)."
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="6. Hundimientos y agrietamientos (hora y descripción del evento)."
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="7. Fugas de agua (tipo, hora, duración y descripción del evento)."
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="8. Ubicación y estado de infraestructura riesgosa."
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="La iniciativa no pretende dar una solución inmediata a una situación de emergencia o contingencia, sin embargo, se ha implementado una función para facilitar el contacto con las dependencias correspondientes para solicitar auxilio, ayuda o asesoría, dependiendo el tipo y la intensidad del incidente."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="En la Página Web www.agua-ciudad.org/aguas/ además se ofrece la posibilidad de participar con el proyecto reportando y monitoreando la precipitación del agua de lluvia a través de un pluviómetro casero."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Cada año se elaborará un informe con análisis, interpretación y resultados que estará a la disposición de los usuarios por medios electrónicos."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="El proyecto es promovido por los integrantes de Grupo Agua y Ciudad y por investigadores de la Escuela de Ingenierías, Arquitectura y Salud del Tec de Monterrey, campus Guadalajara."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Los involucrados en la presente iniciativa son:"
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="- Mtro. Luis Márquez Valdés: director de urbanismo de Grupo Agua y Ciudad en la creación y dirección general del proyecto."
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="- Dra. Laurence Bertoux, directora de la Escuela de Arquitectura del Tec de Monterrey, Campus Guadalajara, Dr. Héctor Barrios Piña y Dr. Aldo Iván Ramírez Orozco del Centro para la Cultura del Agua de América Latina y el Caribe del Tec de Monterrey, en el apoyo y desarrollo del proyecto."
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="- Lic. Elton Osorio Lara: director de itds, en la coordinación de las plataformas digitales."
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="- Jack Juárez: director de Jack Juárez Estudio en el diseño gráfico."
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="- Lic. Álvaro López Sánchez: director de Alvarols, en el desarrollo de la página web."
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="- Ing. Eduardo Prado Ruiz, en el desarrollo de la App iOS."
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="- Los estudiantes de la Carrera de Sistemas Computacionales del Tec de Monterrey, Campus Guadalajara: Antonio Reyes Espinoza, Antonio Hernández Campos y Antonio Casa Madrid Rivas, en el desarrollo de la App Android."
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Si desea participar de alguna forma en la presente iniciativa por favor contáctenos, igualmente si tiene alguna duda o sugerencia por favor no duden en hacerla, sus comentarios y aportaciones son muy importantes para nosotros."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <!-- IR A CONTACTO -->
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

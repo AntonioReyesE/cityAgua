@@ -257,10 +257,10 @@ public class ReportActivity extends Activity {
             public void done(ParseException e) {
                 if (e == null) {
                     //Success
-                    Toast.makeText(getApplicationContext(), "Save on Parse", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), "Save on Parse", Toast.LENGTH_SHORT).show();
                 } else {
                     //Error
-                    Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
                 }
             }
         });

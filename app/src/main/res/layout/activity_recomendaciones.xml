@@ -47,13 +47,95 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/recomendaciones_img"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:id="@+id/info_icon"
+        android:layout_height="50dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/texto_recomendaciones"
+        android:id="@+id/imageView3"
         android:layout_below="@+id/imageView2"
-        android:layout_marginBottom="120dp"
-        />
+        android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/imageView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="RECOMENDACIONES PARA EL REPORTE CIUDADANO DE INCIDENTES HÍDRICOS"
+                android:typeface="monospace"
+                android:textColor="@android:color/holo_blue_light"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="¡AGUAS! Reporte Hídrico Ciudadano es una plataforma para que cada persona reporte en tiempo real o posteriormente (sólo en Página Web) cualquier situación con el agua y sus efectos en la ciudad, tanto los relacionados con la distribución y suministro del agua, el saneamiento, el manejo del agua de lluvias, como en las fallas de sus infraestructuras."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="La plataforma está diseñada para recabar la información sobre: qué, cuándo, dónde y cómo. Entre más detalle se tenga sobre los diferentes incidentes, mejor se podrán analizar y conocer. Por este motivo, invitamos a todos los ciudadanos a no dejar pasar una situación reportándola y haciendo los comentarios que crean necesarios."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <!-- IR A ACERCA DEL PROYECTO -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Cualquier duda o sugerencia por favor no dude en hacerla."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <!-- IR A CONTACTO -->
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>

@@ -46,13 +46,500 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/glosario_img"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:id="@+id/info_icon"
+        android:layout_height="50dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/texto_glosario_term"
+        android:id="@+id/imageView3"
         android:layout_below="@+id/imageView2"
-        android:layout_marginBottom="120dp"
-        />
+        android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/imageView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:fillViewport="false">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="A continuación te ofrecemos la definición de algunas palabras clave para el uso de la aplicación:"
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="> AGUA"
+                android:typeface="monospace"
+                android:textColor="@android:color/holo_blue_light"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Fase líquida de una sustancia formada por un átomo de oxígeno y dos de hidrógeno. Se congela a 0°C y hierve a 100 °C. De origen presuntamente extraterrestre es el principal componente de todos los seres vivos. El agua es un bien y derecho esencial para la vida y el desarrollo económico social de las naciones, es un recurso natural renovable que puede tornarse escaso con el crecimiento, desarrollo y manejo de la población, las industrias y la agricultura."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="> AGRIETAMIENTO"
+                android:typeface="monospace"
+                android:textColor="@android:color/holo_blue_light"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Al igual que el hundimiento el agrietamiento se refiere a fisuras o grietas que aparecen en el suelo principalmente por razones de fugas de agua, de erosión por presencia de  agua en el subsuelo o por la extracción de la misma."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="> ARROYO"
+                android:typeface="monospace"
+                android:textColor="@android:color/holo_blue_light"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Río pequeño y poco profundo por lo general de flujo permanente aunque en muchas ciudades de México los arroyos son de temporal lo que significa que sólo llevan agua durante el temporal de lluvias."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="> CAUCE"
+                android:typeface="monospace"
+                android:textColor="@android:color/holo_blue_light"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Cuerpo de agua claramente identificable por el que corre agua de forma temporal o continua. En muchas de las ciudades de México los cauces han sido rectificados, canalizados o entubados."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="> CONTAMINACIÓN DEL AGUA"
+                android:typeface="monospace"
+                android:textColor="@android:color/holo_blue_light"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Es la presencia de sustancias químicas, biológicas o de otra naturaleza en concentraciones superiores a las condiciones naturales que son perjudiciales para la salud humana y para la calidad de los ecosistemas acuáticos y terrestres. En México se estima que más de las tres cuartas partes de sus ríos y arroyos están contaminados. Para efectos de esta aplicación se considera también contaminación del agua la basura en vialidades debido a que cuando llueve ésta es arrastrada hacia las alcantarillas y arroyos obstruyéndolas y"
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="> CUENCA HIDROLÓGICA"
+                android:typeface="monospace"
+                android:textColor="@android:color/holo_blue_light"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="La superficie de terreno que capta el agua de lluvia y la conduce a través de arroyos y ríos hacia la parte más baja desembocando en el mar o en algún lago. En el caso de la ciudad de Guadalajara casi todas sus cuencas hidrológicas drenan al río Grande de Santiago que llega al océano Pacífico al Sur del Puerto de San Blas en el Estado de Nayarit."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <!-- IR A EN QUE CUENCA VIVES -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="> CUERPO DE AGUA"
+                android:typeface="monospace"
+                android:textColor="@android:color/holo_blue_light"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Masa o extensión de agua: arroyos, riachuelos, ríos, lagos, lagunas, humedales, ojos de agua, veneros, mares, océanos entre otros."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="> DESLAVE"
+                android:typeface="monospace"
+                android:textColor="@android:color/holo_blue_light"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Los deslaves o derrumbes son desplazamientos de la tierra en cerros, laderas o taludes por lo general causados por fuertes lluvias que desprenden y arrastran el material aguas abajo, en otras palabras son efectos de la erosión."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="> ENCHARCAMIENTO"
+                android:typeface="monospace"
+                android:textColor="@android:color/holo_blue_light"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Acumulación de agua en espacios públicos (vialidades, plazas y parques) debido a: la lluvia, fugas de agua, falta de drenaje pluvial, obstrucción del mismo o mal diseño topográfico de la ciudad. En las ciudades muchos de los encharcamientos son ocasionados por la basura que arrastra la lluvia y tapa las alcantarillas de la calles."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="> FALTA DE AGUA"
+                android:typeface="monospace"
+                android:textColor="@android:color/holo_blue_light"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="La escasez es cuando el impacto agregado de todos los usuarios, bajo determinado orden institucional, afecta al suministro o a la calidad del agua impidiendo satisfacer la demanda del sector doméstico, industrial, agrícola, incluso medioambiental."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="El agua en cantidad y calidad es un derecho humano fundamental y universal."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="> FUGAS DE AGUA"
+                android:typeface="monospace"
+                android:textColor="@android:color/holo_blue_light"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Salida o pérdida de agua a través de cualquiera de los elementos o uniones del sistema de agua potable, toma domiciliaria o alcantarillado sanitario. Se originan principalmente por falta de mantenimiento del sistema, por temblores, así como por negligencias y accidentes como podría ser dejar la llave abierta o por la construcción de obras o infraestructura subterránea."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="> HUNDIMIENTO"
+                android:typeface="monospace"
+                android:textColor="@android:color/holo_blue_light"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Al igual que los deslaves el hundimiento se refiere a socavamientos del suelo principalmente por razones de fugas de agua, de erosión por presencia de agua en el subsuelo o por la extracción de la misma."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="> INFRAESTRUCTURA"
+                android:typeface="monospace"
+                android:textColor="@android:color/holo_blue_light"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Son las obras que se construyen por lo general debajo de la ciudad para suministrar los servicios básicos municipales; en la caso de la infraestructura hidráulica esta incluye la red hidráulica (agua potable),  la red de drenaje sanitario (agua negra) y la red de drenaje pluvial."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <!-- VIÑETAS INFRAESTRUCTURA -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="- Infraestructura Hidráulica"
+                    android:typeface="monospace"
+                    android:textColor="@android:color/holo_blue_light"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Es el conjunto de obras con las que cuenta una determinada región, para abastecerse de agua requerida a los usuarios. Estas pueden ser presas, bordos, tanques, plantas potabilizadoras, tuberías, pozos, acueductos, canales, vertedores, accesorios, entre otros."
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="- Infraestructura Sanitaria"
+                    android:typeface="monospace"
+                    android:textColor="@android:color/holo_blue_light"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Es el conjunto de obras con las que cuenta una determinada región, para desalojar, tratar y disponer de las agua residuales. Estas pueden ser tuberías, cárcamos, plantas de tratamiento, registros, pozos de visita, pozos de absorción, accesorios, entre otros."
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="- Infraestructura Pluvial"
+                    android:typeface="monospace"
+                    android:textColor="@android:color/holo_blue_light"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Es el conjunto de obras con las que cuenta una determinada región, para manejar, conducir y disponer del agua de lluvia. Estas pueden ser canaletas, canales, colectores, alcantarillas, bocas de tormenta, accesorios, entre otros."
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="> INUNDACIÓN"
+                android:typeface="monospace"
+                android:textColor="@android:color/holo_blue_light"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Es la invasión o penetración de agua en sitios donde usualmente no la hay por la inusual elevación de su nivel. Se producen por lo general en terrenos planos por fuertes lluvias, oleaje pero también por fugas de agua o por fallas de la infraestructura como podría ser una presa. En algunas ciudades de México se producen fuertes inundaciones durante el temporal debido a que la cuenca ha sido impermeabilizada con vialidades y manzanas y sus cauces han sido canalizados o entubados quitándole al agua su espacio."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="> PLUVIAL"
+                android:typeface="monospace"
+                android:textColor="@android:color/holo_blue_light"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Término o palabra que se refiere a la lluvia."
+                android:typeface="monospace"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text=""/>
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
