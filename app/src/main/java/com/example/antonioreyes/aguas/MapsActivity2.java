@@ -94,7 +94,7 @@ public class MapsActivity2 extends FragmentActivity implements LocationListener 
         // mMap.addMarker(new MarkerOptions().position(latLng));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(15));
-        Toast.makeText(this, latLng+" ",Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, latLng+" ",Toast.LENGTH_LONG).show();
         center = latLng;
         // locationTv.setText("Latitude:" + latitude + ", Longitude:" + longitude);
     }
