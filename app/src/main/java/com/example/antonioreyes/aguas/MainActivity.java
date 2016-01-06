@@ -21,9 +21,9 @@ public class MainActivity extends Activity {
             "CONTAMINACIÓN DEL AGUA",
             "INUNDACIONES",
             "ENCHARCAMIENTOS",
-            "FUGAS DE AGUA EN EXTERIORES",
             "DESLAVES",
             "HUNDIMIENTOS Y/O AGRIETAMIENTOS",
+            "FUGAS DE AGUA EN EXTERIORES",
             "INFRAESTRUCTURA EN RIESGO"
     } ;
     Integer[] imageId = {
@@ -31,9 +31,9 @@ public class MainActivity extends Activity {
             R.drawable.boton_reportar_on_02,
             R.drawable.boton_reportar_on_03,
             R.drawable.boton_reportar_on_04,
-            R.drawable.boton_reportar_on_05,
             R.drawable.boton_reportar_on_06,
             R.drawable.boton_reportar_on_07,
+            R.drawable.boton_reportar_on_05,
             R.drawable.boton_reportar_on_08
     };
 
