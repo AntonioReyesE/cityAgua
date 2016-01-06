@@ -1,26 +1,25 @@
-package com.example.antonioreyes.aguas;
+package com.aguayciudad.aguas.app;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 
-public class Cuencas extends Activity {
+public class Recomendaciones extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cuencas);
+        setContentView(R.layout.activity_recomendaciones);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_cuencas, menu);
+        getMenuInflater().inflate(R.menu.menu_recomendaciones, menu);
         return true;
     }
 
@@ -39,7 +38,7 @@ public class Cuencas extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void regresarCuenca(View view){
+    public void regresarRecomendaciones(View view){
         finish();
     }
 }

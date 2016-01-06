@@ -1,4 +1,4 @@
-package com.example.antonioreyes.aguas;
+package com.aguayciudad.aguas.app;
 
 /**
  * Created by antonioreyes on 19/03/15.

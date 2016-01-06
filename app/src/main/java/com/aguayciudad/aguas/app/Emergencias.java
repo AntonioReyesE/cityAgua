@@ -1,9 +1,8 @@
-package com.example.antonioreyes.aguas;
+package com.aguayciudad.aguas.app;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;

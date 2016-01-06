@@ -1,26 +1,25 @@
-package com.example.antonioreyes.aguas;
+package com.aguayciudad.aguas.app;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 
-public class Recomendaciones extends Activity {
+public class GlosarioTerminos extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recomendaciones);
+        setContentView(R.layout.activity_glosario_terminos);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_recomendaciones, menu);
+        getMenuInflater().inflate(R.menu.menu_glosario_terminos, menu);
         return true;
     }
 
@@ -39,7 +38,7 @@ public class Recomendaciones extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void regresarRecomendaciones(View view){
+    public void regresarGlosarioTerminos(View view){
         finish();
     }
 }

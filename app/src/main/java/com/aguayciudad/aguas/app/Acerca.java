@@ -1,26 +1,25 @@
-package com.example.antonioreyes.aguas;
+package com.aguayciudad.aguas.app;
 
-import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 
-public class Confirmation extends ActionBarActivity {
+public class Acerca extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_confirmation);
+        setContentView(R.layout.activity_acerca);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_confirmation, menu);
+        getMenuInflater().inflate(R.menu.menu_acerca, menu);
         return true;
     }
 
@@ -39,7 +38,7 @@ public class Confirmation extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void returnMainMenu(View view){
-        this.finish();
+    public void regresarAcerca(View view){
+        finish();
     }
 }

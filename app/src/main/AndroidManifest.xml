@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.antonioreyes.aguas" >
+    package="com.aguayciudad.aguas.app"
+    android:versionCode="2"
+    android:versionName="1.1">>
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -17,7 +19,7 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
-        android:name=".ParseApplication"
+        android:name="com.aguayciudad.aguas.app.ParseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/nombre_app"
@@ -30,31 +32,31 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name="com.aguayciudad.aguas.app.MapsActivity"
             android:label="@string/title_activity_maps" >
         </activity>
         <activity
-            android:name=".formulario_reporte"
+            android:name="com.aguayciudad.aguas.app.formulario_reporte"
             android:label="@string/title_activity_formulario_reporte" >
         </activity>
         <activity
-            android:name=".MapsActivity2"
+            android:name="com.aguayciudad.aguas.app.MapsActivity2"
             android:label="@string/title_activity_maps_activity2" >
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.aguayciudad.aguas.app.MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
         <activity
-            android:name=".ReportActivity"
+            android:name="com.aguayciudad.aguas.app.ReportActivity"
             android:label="@string/title_activity_falta_agua" >
         </activity>
         <activity
-            android:name=".Confirmation"
+            android:name="com.aguayciudad.aguas.app.Confirmation"
             android:label="@string/title_activity_confirmation" >
         </activity>
         <activity
-            android:name=".splash"
+            android:name="com.aguayciudad.aguas.app.splash"
             android:label="@string/nombre_app" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -63,27 +65,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Emergencias"
+            android:name="com.aguayciudad.aguas.app.Emergencias"
             android:label="@string/title_activity_emergencias" >
         </activity>
         <activity
-            android:name=".Informacion"
+            android:name="com.aguayciudad.aguas.app.Informacion"
             android:label="@string/title_activity_informacion" >
         </activity>
         <activity
-            android:name=".Recomendaciones"
+            android:name="com.aguayciudad.aguas.app.Recomendaciones"
             android:label="@string/title_activity_recomendaciones" >
         </activity>
         <activity
-            android:name=".GlosarioTerminos"
+            android:name="com.aguayciudad.aguas.app.GlosarioTerminos"
             android:label="@string/title_activity_glosario_terminos" >
         </activity>
         <activity
-            android:name=".Cuencas"
+            android:name="com.aguayciudad.aguas.app.Cuencas"
             android:label="@string/title_activity_cuencas" >
         </activity>
         <activity
-            android:name=".Acerca"
+            android:name="com.aguayciudad.aguas.app.Acerca"
             android:label="@string/title_activity_acerca" >
         </activity>
     </application>

@@ -1,4 +1,4 @@
-package com.example.antonioreyes.aguas;
+package com.aguayciudad.aguas.app;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

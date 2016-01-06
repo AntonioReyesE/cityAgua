@@ -1,26 +1,26 @@
-package com.example.antonioreyes.aguas;
+package com.aguayciudad.aguas.app;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 
-public class Acerca extends Activity {
+public class Informacion extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_acerca);
+        setContentView(R.layout.activity_informacion);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_acerca, menu);
+        getMenuInflater().inflate(R.menu.menu_informacion, menu);
         return true;
     }
 
@@ -39,7 +39,27 @@ public class Acerca extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void regresarAcerca(View view){
+    public void recomendaciones(View view){
+        Intent intent = new Intent(this, Recomendaciones.class);
+        startActivity(intent);
+    }
+
+    public void glosarioTerminos(View view){
+        Intent intent = new Intent(this, GlosarioTerminos.class);
+        startActivity(intent);
+    }
+
+    public void cuencas(View view){
+        Intent intent = new Intent(this, Cuencas.class);
+        startActivity(intent);
+    }
+
+    public void acerca(View view){
+        Intent intent = new Intent(this, Acerca.class);
+        startActivity(intent);
+    }
+
+    public void regresaInformacion(View view){
         finish();
     }
 }
