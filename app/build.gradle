@@ -1,15 +1,22 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'ReseaseKey'
+            keyPassword 'diluvio40'
+            storeFile file('/Users/Antonio/AndroidStudioProjects/keystore.release.jks')
+            storePassword 'diluvio40'
+        }
+    }
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
-
     defaultConfig {
         applicationId "com.aguayciudad.aguas.app"
         minSdkVersion 16
         targetSdkVersion 21
-        versionCode 2
-        versionName "1.1"
+        versionCode 3
+        versionName "1.1.1"
     }
     buildTypes {
         release {
