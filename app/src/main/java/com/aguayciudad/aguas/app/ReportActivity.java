@@ -83,11 +83,11 @@ public class ReportActivity extends Activity {
         setTime();
 
         switch (type){
-            case 0: case 3: case 5: case 6:
+            case 0: case 3: case 4: case 5:
                 typeSP.setVisibility(View.GONE);
                 typeLB.setVisibility(View.GONE);
                 break;
-            case 1: case 2: case 4: case 7:
+            case 1: case 2: case 6: case 7:
                 typeSP.setVisibility(View.VISIBLE);
                 typeLB.setVisibility(View.VISIBLE);
                 setSpinnerAdapter(type);
@@ -210,13 +210,13 @@ public class ReportActivity extends Activity {
             case 3:
                 p.put("Tipo_Reporte", "Encharcamientos");
                 break;
-            case 4:
+            case 6:
                 p.put("Tipo_Reporte", "Fugas de agua");
                 break;
-            case 5:
+            case 4:
                 p.put("Tipo_Reporte", "Deslaves");
                 break;
-            case 6:
+            case 5:
                 p.put("Tipo_Reporte", "Socavamientos");
                 break;
             case 7:
@@ -233,7 +233,7 @@ public class ReportActivity extends Activity {
         p.put( "Comentario", commentTV.getText().toString() );
 
         switch (type){
-            case 1: case 2: case 4: case 7:
+            case 1: case 2: case 6: case 7:
                 p.put( "Tipo", typeSP.getSelectedItem().toString() );
                 break;
         }
@@ -338,7 +338,7 @@ public class ReportActivity extends Activity {
                     "Casa: inundación alta"
                 };
                 break;
-            case 4:
+            case 6:
                 values = new String[]{ "Agua potable, ojo de agua o venero",
                     "Agua residual"
                 };
@@ -372,13 +372,13 @@ public class ReportActivity extends Activity {
             case 3:
                 titleIM.setImageResource(R.drawable.boton_reportar_on_04);
                 break;
-            case 4:
+            case 6:
                 titleIM.setImageResource(R.drawable.boton_reportar_on_05);
                 break;
-            case 5:
+            case 4:
                 titleIM.setImageResource(R.drawable.boton_reportar_on_06);
                 break;
-            case 6:
+            case 5:
                 titleIM.setImageResource(R.drawable.boton_reportar_on_07);
                 break;
             case 7:

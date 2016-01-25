@@ -169,7 +169,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Tipo"
+            android:text="Seleccionar"
             android:id="@+id/typeLB"
             android:layout_below="@+id/changeLocationBtn"
             android:layout_alignParentLeft="true"
