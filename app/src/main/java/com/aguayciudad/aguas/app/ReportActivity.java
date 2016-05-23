@@ -243,7 +243,7 @@ public class ReportActivity extends Activity {
         if(imagePreviewIV.getDrawable() != null){
             Bitmap bitmap = ((BitmapDrawable) imagePreviewIV.getDrawable()).getBitmap();
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 80, stream);
             byte[] image = stream.toByteArray();
 
             ParseFile file = new ParseFile("image.png", image);
@@ -289,6 +289,9 @@ public class ReportActivity extends Activity {
             Globals.longitude = data.getDoubleExtra("longitude", 1);
             updateLocation();
         }else if(requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK){
+            Bitmap bitmap = ImagePicker.getImageFromResult(this, resultCode, data);
+            imagePreviewIV.setImageBitmap(bitmap);
+            /*
             Uri selectedImage = data.getData();
             String[] filePathColumn = { MediaStore.Images.Media.DATA };
 
@@ -302,6 +305,7 @@ public class ReportActivity extends Activity {
             cursor.close();
 
             imagePreviewIV.setImageBitmap( BitmapFactory.decodeFile(picturePath) );
+            */
         }else{
             Toast.makeText(this, "Error", Toast.LENGTH_LONG);
         }
@@ -312,9 +316,14 @@ public class ReportActivity extends Activity {
     }
 
     public void selectImage(View v){
-        Intent i = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        //Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        //startActivityForResult(i, RESULT_TAKE_PICTURE);
 
-        startActivityForResult(i, RESULT_LOAD_IMAGE);
+        //Intent i = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        //startActivityForResult(i, RESULT_LOAD_IMAGE);
+
+        Intent chooseImageIntent = ImagePicker.getPickImageIntent(this);
+        startActivityForResult(chooseImageIntent, RESULT_LOAD_IMAGE);
     }
 
 
