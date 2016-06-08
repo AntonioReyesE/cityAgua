@@ -6,27 +6,29 @@ import com.google.api.client.util.Key;
 /**
  * Created by Antonio on 05/06/16.
  */
-public class EventEntity extends GenericJson {
+public class Report extends GenericJson {
     @Key("_id")
     private String id;
     @Key
     private String Tipo_Reporte;
     @Key
-    private String fecha;
+    private String Fecha;
     @Key
-    private String hora;
+    private String Hora;
     @Key
-    private double latitud;
+    private double Latitud;
     @Key
-    private double longitud;
+    private double Longitud;
     @Key
-    private String comentario;
+    private String Comentario;
     @Key
-    private String tipo;
+    private String Tipo;
     @Key
-    private String imagen;
+    private String Nivel_inundacion;
+    @Key
+    private String ImagenFile;
 
-    public EventEntity(){}  //GenericJson classes must have a public empty constructor
+    public Report(){}  //GenericJson classes must have a public empty constructor
 
     public String getId(){
         return this.id;
@@ -37,30 +39,34 @@ public class EventEntity extends GenericJson {
     }
 
     public String getFecha() {
-        return fecha;
+        return Fecha;
     }
 
     public String getHora() {
-        return hora;
+        return Hora;
     }
 
     public double getLatitud() {
-        return latitud;
+        return Latitud;
     }
 
     public double getLongitud() {
-        return longitud;
+        return Longitud;
     }
 
     public String getComentario() {
-        return comentario;
+        return Comentario;
     }
 
     public String getTipo() {
-        return tipo;
+        return Tipo;
     }
 
-    public String getImagen() {
-        return imagen;
+    public String getImagenFile() {
+        return ImagenFile;
+    }
+
+    public String getNivel_inundacion() {
+        return Nivel_inundacion;
     }
 }

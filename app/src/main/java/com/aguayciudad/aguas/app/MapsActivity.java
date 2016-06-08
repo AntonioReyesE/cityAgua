@@ -26,13 +26,6 @@ import com.kinvey.android.callback.KinveyListCallback;
 import com.kinvey.android.callback.KinveyUserCallback;
 import com.kinvey.java.User;
 
-import com.parse.FindCallback;
-import com.parse.ParseException;
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
-
-import java.util.List;
-
 public class MapsActivity extends FragmentActivity implements LocationListener {
 
     public final static String EXTRA_MESSAGE = "com.example.antonioreyes.aguas.message";
@@ -183,9 +176,9 @@ public class MapsActivity extends FragmentActivity implements LocationListener {
         startActivity(intent);
     }
 
-    public void setMarkers(EventEntity[] list){
+    public void setMarkers(Report[] list){
 
-        for (EventEntity temp : list) {
+        for (Report temp : list) {
 
             //Log.d("OBJECT", temp.getString("Tipo_Reporte"));
             //Log.d("OBJECT", String.valueOf(temp.getDouble("Latitud")) );
@@ -245,18 +238,17 @@ public class MapsActivity extends FragmentActivity implements LocationListener {
         mKinveyClient.user().login(new KinveyUserCallback() {
             @Override
             public void onFailure(Throwable error) {
-                Toast.makeText(getApplicationContext(), "Fail", Toast.LENGTH_LONG).show();
 
             }
             @Override
             public void onSuccess(User result) {
-                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+                
             }
         });
-        AsyncAppData<EventEntity> myevents = mKinveyClient.appData("events", EventEntity.class);
-        myevents.get(new KinveyListCallback<EventEntity>() {
+        AsyncAppData<Report> reports = mKinveyClient.appData("Report", Report.class);
+        reports.get(new KinveyListCallback<Report>() {
             @Override
-            public void onSuccess(EventEntity[] result) {
+            public void onSuccess(Report[] result) {
                 setMarkers(result);
             }
             @Override

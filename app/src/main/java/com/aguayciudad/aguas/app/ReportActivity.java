@@ -5,12 +5,8 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
-import android.net.Uri;
-import android.provider.MediaStore;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -110,12 +106,11 @@ public class ReportActivity extends Activity {
         mKinveyClient.user().login(new KinveyUserCallback() {
             @Override
             public void onFailure(Throwable error) {
-                Toast.makeText(getApplicationContext(), "Fail", Toast.LENGTH_LONG).show();
 
             }
             @Override
             public void onSuccess(User result) {
-                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+
             }
         });
 
@@ -220,49 +215,51 @@ public class ReportActivity extends Activity {
 
     public void saveReport(View v){
 
-        EventEntity event = new EventEntity();
+        Report r = new Report();
         switch (type){
             case 0:
-                event.set("Tipo_Reporte", "Falta de agua");
+                r.set("Tipo_Reporte", "Falta de agua");
                 break;
             case 1:
-                event.set("Tipo_Reporte", "Agua contaminada");
+                r.set("Tipo_Reporte", "Agua contaminada");
                 break;
             case 2:
-                event.set("Tipo_Reporte", "Inundaciones");
+                r.set("Tipo_Reporte", "Inundaciones");
                 break;
             case 3:
-                event.set("Tipo_Reporte", "Encharcamientos");
+                r.set("Tipo_Reporte", "Encharcamientos");
                 break;
             case 6:
-                event.set("Tipo_Reporte", "Fugas de agua");
+                r.set("Tipo_Reporte", "Fugas de agua");
                 break;
             case 4:
-                event.set("Tipo_Reporte", "Deslaves");
+                r.set("Tipo_Reporte", "Deslaves");
                 break;
             case 5:
-                event.set("Tipo_Reporte", "Socavamientos");
+                r.set("Tipo_Reporte", "Socavamientos");
                 break;
             case 7:
-                event.set("Tipo_Reporte", "Infraestructura");
+                r.set("Tipo_Reporte", "Infraestructura");
                 break;
             default:
-                event.set("Tipo_Reporte", "Desconocido");
+                r.set("Tipo_Reporte", "Desconocido");
         }
 
-        event.set("fecha", dateTV.getText().toString());
-        event.set("hora", timeTV.getText().toString());
-        event.set("latitud", Globals.latitude);
-        event.set("longitud", Globals.longitude);
-        event.set("comentario", commentTV.getText().toString());
+        r.set("Fecha", dateTV.getText().toString());
+        r.set("Hora", timeTV.getText().toString());
+        r.set("Latitud", Globals.latitude);
+        r.set("Longitud", Globals.longitude);
+        r.set("Comentario", commentTV.getText().toString());
 
         switch (type){
-            case 1: case 2: case 6: case 7:
-                event.set("Tipo", typeSP.getSelectedItem().toString());
+            case 1: case 6: case 7:
+                r.set("Tipo", typeSP.getSelectedItem().toString());
+                break;
+            case 2:
+                r.set("Tipo", typeSP.getSelectedItem().toString());
+                r.set("Nivel_inundacion", typeSP.getSelectedItem().toString());
                 break;
         }
-
-
 
         if(imagePreviewIV.getDrawable() != null){
             Bitmap bitmap = ((BitmapDrawable) imagePreviewIV.getDrawable()).getBitmap();
@@ -273,18 +270,17 @@ public class ReportActivity extends Activity {
             ParseFile file = new ParseFile("image.png", image);
             file.saveInBackground();
 
-            event.set("ImageFile", file);
+            r.set("ImageFile", file);
         }
 
-        AsyncAppData<EventEntity> myevents = mKinveyClient.appData("events", EventEntity.class);
-        myevents.save(event, new KinveyClientCallback<EventEntity>() {
+        AsyncAppData<Report> report = mKinveyClient.appData("Report", Report.class);
+        report.save(r, new KinveyClientCallback<Report>() {
             @Override
             public void onFailure(Throwable e) {
-
                 Log.e("TAG", "failed to save event data", e);
             }
             @Override
-            public void onSuccess(EventEntity r) {
+            public void onSuccess(Report r) {
                 Log.d("TAG", "saved data for entity " + r.get("Tipo_Reporte") );
             }
         });
