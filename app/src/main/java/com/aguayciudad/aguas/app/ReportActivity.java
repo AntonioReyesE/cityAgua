@@ -21,19 +21,16 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
+import java.util.Calendar;
+
 import com.kinvey.android.AsyncAppData;
 import com.kinvey.android.Client;
 import com.kinvey.android.callback.KinveyUserCallback;
 import com.kinvey.java.User;
 import com.kinvey.java.core.KinveyClientCallback;
 
-import com.parse.ParseException;
-import com.parse.ParseFile;
-import com.parse.ParseObject;
-import com.parse.SaveCallback;
 
-import java.io.ByteArrayOutputStream;
-import java.util.Calendar;
 
 public class ReportActivity extends Activity {
 
@@ -54,7 +51,6 @@ public class ReportActivity extends Activity {
     private Calendar calendar;
     private int year, month, day, hour, minute;
 
-    private ParseObject p;
     private Client mKinveyClient;
 
     @Override
@@ -113,8 +109,6 @@ public class ReportActivity extends Activity {
 
             }
         });
-
-        p = new ParseObject("Report");
     }
 
 
@@ -267,10 +261,6 @@ public class ReportActivity extends Activity {
             bitmap.compress(Bitmap.CompressFormat.PNG, 80, stream);
             byte[] image = stream.toByteArray();
 
-            ParseFile file = new ParseFile("image.png", image);
-            file.saveInBackground();
-
-            r.set("ImageFile", file);
         }
 
         AsyncAppData<Report> report = mKinveyClient.appData("Report", Report.class);
@@ -285,17 +275,6 @@ public class ReportActivity extends Activity {
             }
         });
 
-        p.saveInBackground(new SaveCallback() {
-            public void done(ParseException e) {
-                if (e == null) {
-                    //Success
-                    //Toast.makeText(getApplicationContext(), "Save on Parse", Toast.LENGTH_SHORT).show();
-                } else {
-                    //Error
-                    //Toast.makeText(getApplicationContext(), "Failed", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
         Intent intent = new Intent(this, Confirmation.class);
         startActivity(intent);
         this.finish();
@@ -324,6 +303,7 @@ public class ReportActivity extends Activity {
         }else if(requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK){
             Bitmap bitmap = ImagePicker.getImageFromResult(this, resultCode, data);
             imagePreviewIV.setImageBitmap(bitmap);
+
             /*
             Uri selectedImage = data.getData();
             String[] filePathColumn = { MediaStore.Images.Media.DATA };
@@ -339,6 +319,7 @@ public class ReportActivity extends Activity {
 
             imagePreviewIV.setImageBitmap( BitmapFactory.decodeFile(picturePath) );
             */
+
         }else{
             Toast.makeText(this, "Error", Toast.LENGTH_LONG);
         }
@@ -428,5 +409,4 @@ public class ReportActivity extends Activity {
                 break;
         }
     }
-
 }

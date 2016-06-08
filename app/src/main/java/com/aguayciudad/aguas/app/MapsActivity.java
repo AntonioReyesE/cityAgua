@@ -180,10 +180,6 @@ public class MapsActivity extends FragmentActivity implements LocationListener {
 
         for (Report temp : list) {
 
-            //Log.d("OBJECT", temp.getString("Tipo_Reporte"));
-            //Log.d("OBJECT", String.valueOf(temp.getDouble("Latitud")) );
-            //Log.d("OBJECT", String.valueOf(temp.getDouble("Longitud")) );
-
             String tipo = temp.getTipo_Reporte();
             double lat = temp.getLatitud();
             double lon = temp.getLongitud();
@@ -242,7 +238,7 @@ public class MapsActivity extends FragmentActivity implements LocationListener {
             }
             @Override
             public void onSuccess(User result) {
-                
+
             }
         });
         AsyncAppData<Report> reports = mKinveyClient.appData("Report", Report.class);
