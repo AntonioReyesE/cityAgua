@@ -12,6 +12,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,6 +24,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import com.kinvey.android.AsyncAppData;
+import com.kinvey.android.Client;
+import com.kinvey.android.callback.KinveyUserCallback;
+import com.kinvey.java.User;
+import com.kinvey.java.core.KinveyClientCallback;
 
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -52,6 +59,7 @@ public class ReportActivity extends Activity {
     private int year, month, day, hour, minute;
 
     private ParseObject p;
+    private Client mKinveyClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +103,21 @@ public class ReportActivity extends Activity {
         }
 
         setTitleImage();
+
+        mKinveyClient = new Client.Builder("kid_SktNtZOX", "65031a1aa45c4363a57c4369304843a9"
+                , this.getApplicationContext()).build();
+
+        mKinveyClient.user().login(new KinveyUserCallback() {
+            @Override
+            public void onFailure(Throwable error) {
+                Toast.makeText(getApplicationContext(), "Fail", Toast.LENGTH_LONG).show();
+
+            }
+            @Override
+            public void onSuccess(User result) {
+                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+            }
+        });
 
         p = new ParseObject("Report");
     }
@@ -197,44 +220,45 @@ public class ReportActivity extends Activity {
 
     public void saveReport(View v){
 
+        EventEntity event = new EventEntity();
         switch (type){
             case 0:
-                p.put("Tipo_Reporte", "Falta de agua");
+                event.set("Tipo_Reporte", "Falta de agua");
                 break;
             case 1:
-                p.put("Tipo_Reporte", "Agua contaminada");
+                event.set("Tipo_Reporte", "Agua contaminada");
                 break;
             case 2:
-                p.put("Tipo_Reporte", "Inundaciones");
+                event.set("Tipo_Reporte", "Inundaciones");
                 break;
             case 3:
-                p.put("Tipo_Reporte", "Encharcamientos");
+                event.set("Tipo_Reporte", "Encharcamientos");
                 break;
             case 6:
-                p.put("Tipo_Reporte", "Fugas de agua");
+                event.set("Tipo_Reporte", "Fugas de agua");
                 break;
             case 4:
-                p.put("Tipo_Reporte", "Deslaves");
+                event.set("Tipo_Reporte", "Deslaves");
                 break;
             case 5:
-                p.put("Tipo_Reporte", "Socavamientos");
+                event.set("Tipo_Reporte", "Socavamientos");
                 break;
             case 7:
-                p.put("Tipo_Reporte", "Infraestructura");
+                event.set("Tipo_Reporte", "Infraestructura");
                 break;
             default:
-                p.put("Tipo_Reporte", "Desconocido");
+                event.set("Tipo_Reporte", "Desconocido");
         }
 
-        p.put( "Fecha", dateTV.getText().toString() );
-        p.put( "Hora", timeTV.getText().toString() );
-        p.put( "Latitud", Globals.latitude );
-        p.put( "Longitud", Globals.longitude );
-        p.put( "Comentario", commentTV.getText().toString() );
+        event.set("fecha", dateTV.getText().toString());
+        event.set("hora", timeTV.getText().toString());
+        event.set("latitud", Globals.latitude);
+        event.set("longitud", Globals.longitude);
+        event.set("comentario", commentTV.getText().toString());
 
         switch (type){
             case 1: case 2: case 6: case 7:
-                p.put( "Tipo", typeSP.getSelectedItem().toString() );
+                event.set("Tipo", typeSP.getSelectedItem().toString());
                 break;
         }
 
@@ -249,8 +273,21 @@ public class ReportActivity extends Activity {
             ParseFile file = new ParseFile("image.png", image);
             file.saveInBackground();
 
-            p.put("ImageFile", file);
+            event.set("ImageFile", file);
         }
+
+        AsyncAppData<EventEntity> myevents = mKinveyClient.appData("events", EventEntity.class);
+        myevents.save(event, new KinveyClientCallback<EventEntity>() {
+            @Override
+            public void onFailure(Throwable e) {
+
+                Log.e("TAG", "failed to save event data", e);
+            }
+            @Override
+            public void onSuccess(EventEntity r) {
+                Log.d("TAG", "saved data for entity " + r.get("Tipo_Reporte") );
+            }
+        });
 
         p.saveInBackground(new SaveCallback() {
             public void done(ParseException e) {

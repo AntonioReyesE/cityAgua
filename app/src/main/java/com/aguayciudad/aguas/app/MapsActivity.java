@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -18,6 +19,13 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import com.kinvey.android.AsyncAppData;
+import com.kinvey.android.Client;
+import com.kinvey.android.callback.KinveyListCallback;
+import com.kinvey.android.callback.KinveyUserCallback;
+import com.kinvey.java.User;
+
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
@@ -31,6 +39,8 @@ public class MapsActivity extends FragmentActivity implements LocationListener {
     public static LatLng center;
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
+
+    private Client mKinveyClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -173,17 +183,18 @@ public class MapsActivity extends FragmentActivity implements LocationListener {
         startActivity(intent);
     }
 
-    public void setMarkers(List<ParseObject> list){
-        for (ParseObject temp : list) {
-            /*
-            Log.d("OBJECT", temp.getString("Tipo_Reporte"));
-            Log.d("OBJECT", String.valueOf(temp.getDouble("Latitud")) );
-            Log.d("OBJECT", String.valueOf(temp.getDouble("Longitud")) );
-            */
-            String tipo = temp.getString("Tipo_Reporte");
-            double lat = temp.getDouble("Latitud");
-            double lon = temp.getDouble("Longitud");
-            String comentario = temp.getString("Comentario");
+    public void setMarkers(EventEntity[] list){
+
+        for (EventEntity temp : list) {
+
+            //Log.d("OBJECT", temp.getString("Tipo_Reporte"));
+            //Log.d("OBJECT", String.valueOf(temp.getDouble("Latitud")) );
+            //Log.d("OBJECT", String.valueOf(temp.getDouble("Longitud")) );
+
+            String tipo = temp.getTipo_Reporte();
+            double lat = temp.getLatitud();
+            double lon = temp.getLongitud();
+            String comentario = temp.getComentario();
             LatLng coordenadas = new LatLng(lat, lon);
             int img = 0;
             switch (tipo){
@@ -228,19 +239,32 @@ public class MapsActivity extends FragmentActivity implements LocationListener {
     }
 
     public void getReports(){
-        ParseQuery<ParseObject> query = ParseQuery.getQuery("Report");
-        query.setLimit(1000);
-        query.findInBackground(new FindCallback<ParseObject>() {
-            public void done(List<ParseObject> list, ParseException e) {
-                if (e == null) {
-                    // Success
-                    setMarkers(list);
-                } else {
-                    // Error
-                    Log.d("score", "Error: " + e.getMessage());
-                }
+        mKinveyClient = new Client.Builder("kid_SktNtZOX", "65031a1aa45c4363a57c4369304843a9"
+                , this.getApplicationContext()).build();
+
+        mKinveyClient.user().login(new KinveyUserCallback() {
+            @Override
+            public void onFailure(Throwable error) {
+                Toast.makeText(getApplicationContext(), "Fail", Toast.LENGTH_LONG).show();
+
+            }
+            @Override
+            public void onSuccess(User result) {
+                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
             }
         });
+        AsyncAppData<EventEntity> myevents = mKinveyClient.appData("events", EventEntity.class);
+        myevents.get(new KinveyListCallback<EventEntity>() {
+            @Override
+            public void onSuccess(EventEntity[] result) {
+                setMarkers(result);
+            }
+            @Override
+            public void onFailure(Throwable error)  {
+                Log.e("TAG", "failed to fetch all", error);
+            }
+        });
+
     }
 
 

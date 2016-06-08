@@ -14,10 +14,13 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.kinvey.android.callback.KinveyPingCallback;
 import com.parse.Parse;
 import com.parse.ParseObject;
 import com.parse.ParseException;
 import com.parse.SaveCallback;
+
+import com.kinvey.android.Client;
 
 import java.util.Calendar;
 
@@ -37,6 +40,8 @@ public class formulario_reporte extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_reporte);
+
+
 
         Parse.enableLocalDatastore(getApplication());
         Parse.initialize(getApplication(), "D4tClbuaS3OCWzRvQjT2L3vB8KUDJesFvVNbeJke", "6xkgf0GC8KvhNXPtXrGG01vXip5EfffnDkacnZ8O");
