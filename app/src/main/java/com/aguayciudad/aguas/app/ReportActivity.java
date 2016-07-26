@@ -96,7 +96,7 @@ public class ReportActivity extends Activity {
 
         setTitleImage();
 
-        mKinveyClient = new Client.Builder("kid_SktNtZOX", "65031a1aa45c4363a57c4369304843a9"
+        mKinveyClient = new Client.Builder("kid_bJcHVn6xbb", "34ca4ecf284e46e5ac07f93085ff7bb9"
                 , this.getApplicationContext()).build();
 
         mKinveyClient.user().login(new KinveyUserCallback() {
